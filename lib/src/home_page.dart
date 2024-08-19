@@ -11,6 +11,61 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+    void showCoupon() {
+      showModalBottomSheet<void>(
+        context: context,
+        builder: (BuildContext context) {
+          return Container(
+            decoration: BoxDecoration(
+              color: orange,
+              borderRadius:
+                  const BorderRadius.vertical(top: Radius.circular(19)),
+            ),
+            height: 390,
+            width: 350,
+            child: Padding(
+              padding: const EdgeInsets.only(top: 4),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Container(
+                    margin: const EdgeInsets.only(top: 4),
+                    width: MediaQuery.of(context).size.width,
+                    decoration: const BoxDecoration(
+                      border: Border(
+                        bottom: BorderSide(
+                          width: 2,
+                          color: Color(0xfffd9e82),
+                        ),
+                      ),
+                    ),
+                    child: const Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                            style: TextStyle(color: Colors.white), "Coupons")),
+                  ),
+                  const Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold),
+                        "Cheese Burger"),
+                  ),
+                  ListTile(
+                    textColor: Colors.white,
+                    title: Text("ID"),
+                    subtitle: Text("C13579246810"),
+                  )
+                ],
+              ),
+            ),
+          );
+        },
+      );
+    }
+
     List<Widget> myTabs = [
       const SizedBox(height: 40, child: Center(child: Text("Dishes"))),
       const Text("Pizaa"),
@@ -66,7 +121,7 @@ class _HomePageState extends State<HomePage> {
                     elevation: WidgetStateProperty.all(5),
                     backgroundColor: WidgetStateProperty.all(orange),
                   ),
-                  onPressed: () {},
+                  onPressed: showCoupon,
                   child: const Text(
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
