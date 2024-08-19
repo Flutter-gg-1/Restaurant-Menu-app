@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class RestaurantScreen extends StatelessWidget {
   const RestaurantScreen({super.key});
@@ -583,11 +584,73 @@ class RestaurantScreen extends StatelessWidget {
                                         height: 548.43,
                                         decoration: BoxDecoration(
                                           borderRadius:
-                                              BorderRadius.circular(20),
+                                              BorderRadius.circular(25),
                                           color: const Color(0xffFB6236),
                                         ),
-                                        child:
-                                            const Center(child: Text('data')),
+                                        child: Column(
+                                          children: [
+                                            const Align(
+                                                alignment: Alignment.topLeft,
+                                                child: Padding(
+                                                  padding: EdgeInsets.only(
+                                                      top: 8, left: 8),
+                                                  child: Text(
+                                                    'Coupons',
+                                                    style: TextStyle(
+                                                        fontSize: 19.94,
+                                                        color: Colors.white,
+                                                        fontWeight:
+                                                            FontWeight.w500),
+                                                  ),
+                                                )),
+                                            const Divider(),
+                                            const Align(
+                                              alignment: Alignment.topLeft,
+                                              child: Padding(
+                                                padding: EdgeInsets.all(18.0),
+                                                child: Text(
+                                                  'Cheese Burger',
+                                                  style: TextStyle(
+                                                      fontSize: 29.91,
+                                                      color: Colors.white,
+                                                      fontWeight:
+                                                          FontWeight.w400),
+                                                ),
+                                              ),
+                                            ),
+                                            const Align(
+                                                alignment: Alignment.topLeft,
+                                                child: Padding(
+                                                  padding:
+                                                      EdgeInsets.only(left: 19),
+                                                  child: Text(
+                                                    'ID\nC13579246810',
+                                                    style: TextStyle(
+                                                        color: Colors.white),
+                                                  ),
+                                                )),
+                                            const SizedBox(
+                                              height: 80,
+                                            ),
+                                            Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                Container(
+                                                  height: 172.52,
+                                                  width: 172.52,
+                                                  decoration: BoxDecoration(
+                                                      color: Colors.white,
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              18.62)),
+                                                  child: Image.asset(
+                                                      "assets/QR Code Sample.png"),
+                                                )
+                                              ],
+                                            )
+                                          ],
+                                        ),
                                       );
                                     });
                               },
@@ -615,40 +678,6 @@ class RestaurantScreen extends StatelessWidget {
                           style: TextButton.styleFrom(
                             fixedSize: const Size.fromWidth(319),
                           ),
-                          //
-                          // showDialog(
-                          //                           context: context,
-                          //                           builder: (_) => AlertDialog(
-                          //                             shape: const RoundedRectangleBorder(
-                          //                                 borderRadius:
-                          //                                     BorderRadius.all(Radius.circular(9.0))),
-                          //                             title:
-                          //                                 const Center(child: Text('This is an Alert')),
-
-                          //                             actions: <Widget>[
-                          //                               Center(
-                          //                                 child: Container(
-                          //                                   height: 54,
-                          //                                   width: 225,
-                          //                                   decoration: BoxDecoration(
-                          //                                       color: const Color(0xffFB6236),
-                          //                                       borderRadius: BorderRadius.circular(9)),
-                          //                                   child: TextButton(
-                          //                                     onPressed: () =>
-                          //                                         Navigator.pop(context, 'Cancel'),
-                          //                                     child: const Text(
-                          //                                       'Cancle',
-                          //                                       style: TextStyle(
-                          //                                           fontWeight: FontWeight.w500,
-                          //                                           color: Colors.white),
-                          //                                     ),
-                          //                                   ),
-                          //                                 ),
-                          //                               ),
-                          //                             ],
-                          //                           ),
-                          //                         )
-                          //
                           onPressed: () => showDialog(
                             context: context,
                             builder: (_) => Center(
@@ -687,10 +716,10 @@ class RestaurantScreen extends StatelessWidget {
                                               BorderRadius.circular(9),
                                         ),
                                         child: TextButton(
-                                          onPressed: () =>
-                                              Navigator.pop(context, 'Cancel'),
+                                          onPressed: () => Navigator.pop(
+                                              context, 'Close alert'),
                                           child: const Text(
-                                            'Cancle',
+                                            'Close alert',
                                             style: TextStyle(
                                                 fontWeight: FontWeight.w500,
                                                 color: Colors.white),
