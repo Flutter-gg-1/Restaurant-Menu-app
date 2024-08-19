@@ -1,18 +1,8 @@
 import 'package:flutter/material.dart';
 
 class FoodCard extends StatelessWidget {
-  final String image;
-  final String name;
-  final String desc;
-  final String rating;
-  final double price;
-  const FoodCard(
-      {super.key,
-      required this.image,
-      required this.name,
-      required this.desc,
-      required this.rating,
-      required this.price});
+  final Map<String, dynamic> food;
+  const FoodCard({super.key, required this.food});
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +29,7 @@ class FoodCard extends StatelessWidget {
                     height: 120,
                     width: 108,
                     child: FittedBox(
-                        fit: BoxFit.contain, child: Image.asset(image))),
+                        fit: BoxFit.contain, child: Image.asset(food['image']))),
               ],
             ),
             const SizedBox(
@@ -52,7 +42,7 @@ class FoodCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    name,
+                    food['name'],
                     style: const TextStyle(
                         fontSize: 14,
                         fontFamily: 'Gilroy',
@@ -60,14 +50,14 @@ class FoodCard extends StatelessWidget {
                         color: Color.fromRGBO(72, 70, 70, 1)),
                   ),
                   Text(
-                    desc,
+                    food['desc'],
                     style: const TextStyle(
                         fontSize: 13,
                         fontFamily: 'Gilroy',
                         color: Color.fromRGBO(72, 70, 70, 1)),
                   ),
                   Text(
-                    '\u2605 $rating',
+                    '\u2605 ${food['rating']}',
                     style: const TextStyle(
                         color: Color.fromRGBO(251, 98, 54, 1),
                         fontFamily: 'Gilroy',
@@ -83,16 +73,14 @@ class FoodCard extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          'AED $price',
+                          'AED ${food['price']}',
                           style: const TextStyle(
                               fontFamily: 'Gilroy',
                               fontWeight: FontWeight.bold,
                               fontSize: 15),
                         ),
                         InkWell(
-                          onTap: () {
-                            
-                          },
+                          onTap: () {},
                           child: Image.asset(
                             'assets/images/plus.png',
                             height: 22,
