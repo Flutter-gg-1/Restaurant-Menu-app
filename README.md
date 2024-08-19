@@ -1,7 +1,12 @@
 # Restaurant Menu app
+overall: is simple interface for Resturant app that show food and has cupon QR scan.
 
-**Complete and submit the TabBar, Bottom Sheet, and Alert dialog Lab of the given design**
+# App sample
+![App Demo](Sample/Restaurant-Menu-app.gif)
 
-**Note: Don't forget to include the Screenshots of your implementation**
+## Features
 
-**Deadline: at 9:59 am, 20 Aug 2024**
+- View menu items
+- Add items to the cart
+- Place orders
+- QR scanser for cupons

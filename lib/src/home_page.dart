@@ -148,7 +148,37 @@ class _HomePageState extends State<HomePage> {
                     elevation: WidgetStateProperty.all(5),
                     backgroundColor: WidgetStateProperty.all(orange),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    showDialog<String>(
+                      context: context,
+                      builder: (BuildContext context) => AlertDialog(
+                        content: const Center(child: Text("This is an Alert")),
+                        actions: [
+                          SizedBox(
+                            width: MediaQuery.of(context).size.width / 1.6,
+                            child: FilledButton(
+                              style: ButtonStyle(
+                                shape: WidgetStateProperty.all(
+                                    const RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(7)))),
+                                elevation: WidgetStateProperty.all(5),
+                                backgroundColor:
+                                    WidgetStateProperty.all(orange),
+                              ),
+                              onPressed: () => Navigator.pop(context),
+                              child: const Text(
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 18,
+                                      color: Colors.white),
+                                  "Scan Coupon"),
+                            ),
+                          ),
+                        ],
+                      ),
+                    );
+                  },
                   child: const Text(
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
