@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class FoodItem extends StatelessWidget {
   final String foodPic;
   final String foodName;
   final String foodDesc;
-  final String foodRate;
-  final String foodPrice;
+  final num foodRate;
+  final num foodPrice;
   const FoodItem(
       {super.key,
       required this.foodDesc,
@@ -18,9 +17,9 @@ class FoodItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(bottom: 30),
-      constraints: BoxConstraints(maxHeight: 106, maxWidth: 359),
-      decoration: BoxDecoration(
+      margin: const EdgeInsets.only(bottom: 30),
+      constraints: const BoxConstraints(maxHeight: 106, maxWidth: 359),
+      decoration: const BoxDecoration(
           color: Colors.white,
           boxShadow: [
             BoxShadow(
@@ -32,6 +31,7 @@ class FoodItem extends StatelessWidget {
         children: [
           Column(
             children: [
+              const SizedBox(height: 10,),
               Image.asset(
                 "assets/heart.png",
                 width: 10,
@@ -40,6 +40,7 @@ class FoodItem extends StatelessWidget {
             ],
           ),
           Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset(
                 foodPic,
@@ -48,7 +49,10 @@ class FoodItem extends StatelessWidget {
               ),
             ],
           ),
+          const SizedBox(width: 20,),
           Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 foodName,
@@ -69,7 +73,7 @@ class FoodItem extends StatelessWidget {
                     size: 11,
                   ),
                   Text(
-                    foodRate,
+                    foodRate.toString(),
                     style:
                         const TextStyle(color: Color(0xffFB6236), fontSize: 11),
                   ),
@@ -82,12 +86,8 @@ class FoodItem extends StatelessWidget {
                     style: const TextStyle(
                         fontWeight: FontWeight.bold, fontSize: 15),
                   ),
-                  Container(
-                    width: 10,
-                    height: 10,
-                    color: const Color(0xffFB6236),
-                    child: const Text("+"),
-                  )
+                  const SizedBox(width: 100,),
+                  Image.asset("assets/add.png")
                 ],
               )
             ],

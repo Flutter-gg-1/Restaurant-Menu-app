@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:resturant_app/food_item.dart';
 import 'package:resturant_app/menu_item.dart';
+import 'package:resturant_app/resturant_data.dart';
 
 class ResturantApp extends StatefulWidget {
   const ResturantApp({super.key});
@@ -11,13 +12,22 @@ class ResturantApp extends StatefulWidget {
 
 class _ResturantAppState extends State<ResturantApp> {
 
-  int chosen = 0;
+  int selected = 0;
+  List<String> menuItems = ["Dishes","Pizza","Burger","Drinks","Dessert"];
+  Map<String, Color> menuColors = {"selected" : const Color(0xffFB6236), "unselected" : Colors.white}; 
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Menu",style: TextStyle(color: Color(0xff484646), fontSize: 24, fontWeight: FontWeight.bold)),
+        title: const Text(
+          "Menu",
+          style: TextStyle(
+            color: Color(0xff484646),
+            fontSize: 24,
+            fontWeight: FontWeight.bold
+            )
+          ),
         ),
       body: SafeArea(
         child: DefaultTabController(
@@ -25,47 +35,45 @@ class _ResturantAppState extends State<ResturantApp> {
           child: Column(
             children: [
               TabBar(
-                labelPadding: EdgeInsets.symmetric(horizontal: 10),
+                labelPadding: const EdgeInsets.symmetric(horizontal: 10),
                 labelColor: Colors.white,
                 unselectedLabelColor: Colors.black,
                 indicatorColor: Colors.transparent,
                 dividerColor: Colors.transparent,
                 onTap: (value) {
                   setState(() {
-                    chosen = value;
+                    selected = value;
                   });
                 },
-                tabs: [
-                  MenuItem(itemName: "Dishes", color : chosen==0 ? Color(0xffFB6236) : Colors.white),
-                  MenuItem(itemName: "Pizza", color : chosen==1 ? Color(0xffFB6236) : Colors.white),
-                  MenuItem(itemName: "Burger", color : chosen==2 ? Color(0xffFB6236) : Colors.white),
-                  MenuItem(itemName: "Drinks", color : chosen==3 ? Color(0xffFB6236) : Colors.white),
-                  MenuItem(itemName: "Dessert", color : chosen==4 ? Color(0xffFB6236) : Colors.white),
-                ],
+                tabs: List.generate(menuItems.length, (index){
+                  return MenuItem(itemName: menuItems[index], color: selected==index ? menuColors['selected']! : menuColors['unselected']!);
+                }),
               ),
-              SizedBox(height: 74,),
+              const SizedBox(height: 74,),
               Expanded(
                 child: TabBarView(
-                  children: [
-                    Center(
-                      child: Column(
-                        children: [
-                          FoodItem(foodName: "White Rice",foodDesc: "Basmati rice with Vegetable", foodPic: "assets/rice.png",foodPrice: "45",foodRate: "4.5",),
-                          FoodItem(foodName: "White Rice",foodDesc: "Basmati rice with Vegetable", foodPic: "assets/rice.png",foodPrice: "45",foodRate: "4.5",),
-                        ],
-                      ),
-                    ),
-                    FoodItem(foodName: "Pizza Margherita",foodDesc: "Pizza Margherita Vegetarian", foodPic: "assets/pizza.png",foodPrice: "55.9",foodRate: "5.0",),
-                    FoodItem(foodName: "Cheese Burger",foodDesc: "Bacon Cheeseburger", foodPic: "assets/burger.png",foodPrice: "55.9",foodRate: "5.0",),
-                    FoodItem(foodName: "Coca Cola",foodDesc: "Can Coke", foodPic: "assets/cola.png",foodPrice: "3.9",foodRate: "5.0",),
-                    FoodItem(foodName: "Cupcake Strawberry",foodDesc: "Brown and Pink Dessert", foodPic: "assets/cake.png",foodPrice: "45",foodRate: "10.9",),
-                  ],
-                ),
+                  children: List.generate(menu.length, (menuItemIndex){
+                    return Center(
+                      child: ListView.builder(
+                        itemCount: menu[menuItemIndex].length,
+                        itemBuilder: (context,foodItemIndex) {
+                          return Center(
+                          child: FoodItem(
+                            foodDesc: menu[menuItemIndex][foodItemIndex]['food_desc'],
+                            foodName: menu[menuItemIndex][foodItemIndex]['food_name'],
+                            foodPic: menu[menuItemIndex][foodItemIndex]['food_pic'],
+                            foodPrice: menu[menuItemIndex][foodItemIndex]['food_price'],
+                            foodRate: menu[menuItemIndex][foodItemIndex]['food_rate']
+                            )
+                        );
+                      })
+                    );
+                  })
+                )
               )
-            ],
-          ),
-        ),
-      ),
+          ])
+        )
+      )
     );
   }
 }
