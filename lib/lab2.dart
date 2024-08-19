@@ -52,7 +52,7 @@ class _Lab2State extends State<Lab2> {
                     Tabs(label: 'Dessert', selected: selected, index: 4),
                   ]),
               const SizedBox(
-                height: 44,
+                height: 74,
               ),
               const SizedBox(
                 height: 106,
@@ -98,11 +98,17 @@ class _Lab2State extends State<Lab2> {
                 ),
               ),
               const SizedBox(
-                height: 450,
+                height: 370,
               ),
               Column(
                 children: [
                   ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Color.fromRGBO(251, 98, 54, 1),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(9)),
+                        fixedSize: Size(319, 54),
+                      ),
                       onPressed: () {
                         showModalBottomSheet(
                             shape: const RoundedRectangleBorder(
@@ -114,8 +120,23 @@ class _Lab2State extends State<Lab2> {
                               return BottomDialouge(index: selected);
                             });
                       },
-                      child: const Text('Scan Coupon')),
+                      child: const Text(
+                        'Scan Coupon',
+                        style: TextStyle(
+                            fontSize: 19.94,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.white),
+                      )),
+                  SizedBox(
+                    height: 20,
+                  ),
                   ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Color.fromRGBO(251, 98, 54, 1),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(9)),
+                        fixedSize: Size(319, 54)
+                      ),
                       onPressed: () {
                         showDialog(
                             context: context,
@@ -170,7 +191,13 @@ class _Lab2State extends State<Lab2> {
                               );
                             });
                       },
-                      child: const Text('Show info')),
+                      child: const Text(
+                        'Show info',
+                        style: TextStyle(
+                            fontSize: 19.94,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.white),
+                      )),
                 ],
               )
             ],

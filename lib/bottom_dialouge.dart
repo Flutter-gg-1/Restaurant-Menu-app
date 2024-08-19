@@ -14,7 +14,7 @@ class BottomDialouge extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        width: MediaQuery.of(context).size.width - 80,
+        width: 349,
         height: 500,
         decoration: const BoxDecoration(
             color: Color.fromRGBO(251, 98, 54, 1),
