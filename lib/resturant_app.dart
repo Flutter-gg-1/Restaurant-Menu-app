@@ -70,7 +70,40 @@ class _ResturantAppState extends State<ResturantApp> {
                     );
                   })
                 )
-              )
+              ),
+              SizedBox(
+                height: 270,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ElevatedButton(onPressed: (){
+                      showModalBottomSheet(context: context,backgroundColor: Color(0xffFB6236) ,builder: (context){
+                        return Container(
+                          padding: EdgeInsets.symmetric(horizontal: 17.36, vertical: 13.02),
+                          width: 349,
+                          height: 420,
+                          decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(35.81))),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text("Coupons",style: TextStyle(fontSize: 19.94, color: Colors.white, fontWeight: FontWeight.w500),),
+                              Divider(thickness: 0.5, color: Colors.white,),
+                              Text("Cheese Burger", style: TextStyle(fontSize: 29.91, color: Colors.white),),
+                              SizedBox(height: 26.04,),
+                              Text("ID", style: TextStyle(fontSize: 14.96, color: Colors.white),),
+                              Text("C13579246810", style: TextStyle(fontSize: 17.45, color: Colors.white),),
+                              SizedBox(height: 60.01,),
+                              Image.asset("assets/qrcode.png")
+                            ],
+                          ),
+                        );
+                      });
+                    }, style: ButtonStyle(fixedSize: WidgetStateProperty.all(const Size(319, 45)),shape: WidgetStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(9))),backgroundColor: WidgetStateProperty.all<Color>(const Color(0xffFB6236))), child: const Text("Scan Coupon",style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500,fontSize: 19.94),)),
+                    const SizedBox(height: 21,),
+                    ElevatedButton(onPressed: (){}, style: ButtonStyle(fixedSize: WidgetStateProperty.all(const Size(319, 45)),shape: WidgetStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(9))),backgroundColor: WidgetStateProperty.all<Color>(const Color(0xffFB6236))), child: const Text("Show info",style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500,fontSize: 19.94))),
+                  ],
+                )
+              ),
           ])
         )
       )
