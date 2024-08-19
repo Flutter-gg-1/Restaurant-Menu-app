@@ -5,70 +5,7 @@ List<Map<String, dynamic>> dishesData = [
     'food_pic': "assets/rice.png",
     'food_price': 45,
     'food_rate': 4.5
-  },
-  {
-    'food_name': "White Rice",
-    'food_desc': "Basmati rice with Vegetable",
-    'food_pic': "assets/rice.png",
-    'food_price': 45,
-    'food_rate': 4.5
-  },
-  {
-    'food_name': "White Rice",
-    'food_desc': "Basmati rice with Vegetable",
-    'food_pic': "assets/rice.png",
-    'food_price': 45,
-    'food_rate': 4.5
-  },
-  {
-    'food_name': "White Rice",
-    'food_desc': "Basmati rice with Vegetable",
-    'food_pic': "assets/rice.png",
-    'food_price': 45,
-    'food_rate': 4.5
-  },
-  {
-    'food_name': "White Rice",
-    'food_desc': "Basmati rice with Vegetable",
-    'food_pic': "assets/rice.png",
-    'food_price': 45,
-    'food_rate': 4.5
-  },
-  {
-    'food_name': "White Rice",
-    'food_desc': "Basmati rice with Vegetable",
-    'food_pic': "assets/rice.png",
-    'food_price': 45,
-    'food_rate': 4.5
-  },
-  {
-    'food_name': "White Rice",
-    'food_desc': "Basmati rice with Vegetable",
-    'food_pic': "assets/rice.png",
-    'food_price': 45,
-    'food_rate': 4.5
-  },
-  {
-    'food_name': "White Rice",
-    'food_desc': "Basmati rice with Vegetable",
-    'food_pic': "assets/rice.png",
-    'food_price': 45,
-    'food_rate': 4.5
-  },
-  {
-    'food_name': "White Rice",
-    'food_desc': "Basmati rice with Vegetable",
-    'food_pic': "assets/rice.png",
-    'food_price': 45,
-    'food_rate': 4.5
-  },
-  {
-    'food_name': "White Rice",
-    'food_desc': "Basmati rice with Vegetable",
-    'food_pic': "assets/rice.png",
-    'food_price': 45,
-    'food_rate': 4.5
-  },
+  }
 ];
 List<Map<String, dynamic>> pizzaData = [
   {

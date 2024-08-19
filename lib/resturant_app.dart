@@ -52,6 +52,7 @@ class _ResturantAppState extends State<ResturantApp> {
               const SizedBox(height: 74,),
               Expanded(
                 child: TabBarView(
+                  physics: const NeverScrollableScrollPhysics(),
                   children: List.generate(menu.length, (menuItemIndex){
                     return Center(
                       child: ListView.builder(
@@ -77,22 +78,22 @@ class _ResturantAppState extends State<ResturantApp> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     ElevatedButton(onPressed: (){
-                      showModalBottomSheet(context: context,backgroundColor: Color(0xffFB6236) ,builder: (context){
+                      showModalBottomSheet(context: context,backgroundColor: const Color(0xffFB6236) ,builder: (context){
                         return Container(
-                          padding: EdgeInsets.symmetric(horizontal: 17.36, vertical: 13.02),
+                          padding: const EdgeInsets.symmetric(horizontal: 17.36, vertical: 13.02),
                           width: 349,
                           height: 420,
-                          decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(35.81))),
+                          decoration: const BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(35.81))),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text("Coupons",style: TextStyle(fontSize: 19.94, color: Colors.white, fontWeight: FontWeight.w500),),
-                              Divider(thickness: 0.5, color: Colors.white,),
-                              Text("Cheese Burger", style: TextStyle(fontSize: 29.91, color: Colors.white),),
-                              SizedBox(height: 26.04,),
-                              Text("ID", style: TextStyle(fontSize: 14.96, color: Colors.white),),
-                              Text("C13579246810", style: TextStyle(fontSize: 17.45, color: Colors.white),),
-                              SizedBox(height: 60.01,),
+                              const Text("Coupons",style: TextStyle(fontSize: 19.94, color: Colors.white, fontWeight: FontWeight.w500),),
+                              const Divider(thickness: 0.5, color: Colors.white,),
+                              const Text("Cheese Burger", style: TextStyle(fontSize: 29.91, color: Colors.white),),
+                              const SizedBox(height: 26.04,),
+                              const Text("ID", style: TextStyle(fontSize: 14.96, color: Colors.white),),
+                              const Text("C13579246810", style: TextStyle(fontSize: 17.45, color: Colors.white),),
+                              const SizedBox(height: 60.01,),
                               Image.asset("assets/qrcode.png")
                             ],
                           ),
@@ -100,7 +101,24 @@ class _ResturantAppState extends State<ResturantApp> {
                       });
                     }, style: ButtonStyle(fixedSize: WidgetStateProperty.all(const Size(319, 45)),shape: WidgetStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(9))),backgroundColor: WidgetStateProperty.all<Color>(const Color(0xffFB6236))), child: const Text("Scan Coupon",style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500,fontSize: 19.94),)),
                     const SizedBox(height: 21,),
-                    ElevatedButton(onPressed: (){}, style: ButtonStyle(fixedSize: WidgetStateProperty.all(const Size(319, 45)),shape: WidgetStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(9))),backgroundColor: WidgetStateProperty.all<Color>(const Color(0xffFB6236))), child: const Text("Show info",style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500,fontSize: 19.94))),
+                    ElevatedButton(onPressed: (){
+                      showDialog(context: context, builder: (context) {
+                        return AlertDialog(
+                          elevation: 10,
+                          shadowColor: Colors.black,
+                          contentPadding: const EdgeInsets.all(0),
+                          actionsPadding: const EdgeInsets.only(bottom: 30),
+                          alignment: Alignment.center,
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(9)),
+                          content: Container(alignment: Alignment.center,width: 300, height: 200,child: const Text("This is an Alert", style: TextStyle(fontWeight: FontWeight.w500,fontSize: 26.04, color: Color(0xff573240)),)),
+                          actions: [
+                            Center(child: ElevatedButton(onPressed: (){
+                              Navigator.pop(context);
+                            }, style: ButtonStyle(fixedSize: WidgetStateProperty.all(const Size(225, 45)),shape: WidgetStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(9))),backgroundColor: WidgetStateProperty.all(const Color(0xffFB6236))),child: const Text('Close alert', style: TextStyle(fontSize: 26.04, fontWeight: FontWeight.w500, color: Colors.white),)))
+                          ],
+                        );
+                      });
+                    }, style: ButtonStyle(fixedSize: WidgetStateProperty.all(const Size(319, 45)),shape: WidgetStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(9))),backgroundColor: WidgetStateProperty.all<Color>(const Color(0xffFB6236))), child: const Text("Show info",style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500,fontSize: 19.94))),
                   ],
                 )
               ),
