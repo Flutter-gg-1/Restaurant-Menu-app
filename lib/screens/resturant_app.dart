@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
-import 'package:resturant_app/food_item.dart';
-import 'package:resturant_app/menu_item.dart';
-import 'package:resturant_app/resturant_data.dart';
+import 'package:flutter/material.dart';                 // imports material design widgets and properities
+import 'package:resturant_app/widgets/food_item.dart';  // widget represents a food item (rice - coke ... etc)
+import 'package:resturant_app/widgets/menu_item.dart';  // widget represents a menu item (Dishes - Pizza... etc)
+import 'package:resturant_app/resturant_data.dart';     // data of resturant, contains menu items and food items
 
 class ResturantApp extends StatefulWidget {
   const ResturantApp({super.key});
@@ -14,21 +14,13 @@ class _ResturantAppState extends State<ResturantApp> {
 
   int selected = 0;
   List<String> menuItems = ["Dishes","Pizza","Burger","Drinks","Dessert"];
-  Map<String, Color> menuColors = {"selected" : const Color(0xffFB6236), "unselected" : Colors.white}; 
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          "Menu",
-          style: TextStyle(
-            color: Color(0xff484646),
-            fontSize: 24,
-            fontWeight: FontWeight.bold
-            )
-          ),
-        ),
+        title: const Text("Menu",style: TextStyle(color: Color(0xff484646),fontSize: 24,fontWeight: FontWeight.bold))
+      ),
       body: SafeArea(
         child: DefaultTabController(
           length: 5,
@@ -46,7 +38,7 @@ class _ResturantAppState extends State<ResturantApp> {
                   });
                 },
                 tabs: List.generate(menuItems.length, (index){
-                  return MenuItem(itemName: menuItems[index], color: selected==index ? menuColors['selected']! : menuColors['unselected']!);
+                  return MenuItem(itemName: menuItems[index], color: selected==index ? const Color(0xffFB6236) : Colors.white);
                 }),
               ),
               const SizedBox(height: 74,),
@@ -64,8 +56,10 @@ class _ResturantAppState extends State<ResturantApp> {
                             foodName: menu[menuItemIndex][foodItemIndex]['food_name'],
                             foodPic: menu[menuItemIndex][foodItemIndex]['food_pic'],
                             foodPrice: menu[menuItemIndex][foodItemIndex]['food_price'],
-                            foodRate: menu[menuItemIndex][foodItemIndex]['food_rate']
-                            )
+                            foodRate: menu[menuItemIndex][foodItemIndex]['food_rate'],
+                            picHeight: menu[menuItemIndex][foodItemIndex]['pic_height'],
+                            picWidth: menu[menuItemIndex][foodItemIndex]['pic_width']
+                          )
                         );
                       })
                     );
@@ -99,7 +93,17 @@ class _ResturantAppState extends State<ResturantApp> {
                           ),
                         );
                       });
-                    }, style: ButtonStyle(elevation: WidgetStateProperty.all(5),shadowColor: WidgetStateProperty.all<Color>(Colors.black),fixedSize: WidgetStateProperty.all(const Size(319, 54)),shape: WidgetStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(9))),backgroundColor: WidgetStateProperty.all<Color>(const Color(0xffFB6236))), child: const Text("Scan Coupon",style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500,fontSize: 19.94),)),
+                    }, style: ButtonStyle(
+                      elevation: WidgetStateProperty.all(5),
+                      shadowColor: WidgetStateProperty.all<Color>(Colors.black),
+                      fixedSize: WidgetStateProperty.all(const Size(319, 54)),
+                      shape: WidgetStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(9))),
+                      backgroundColor: WidgetStateProperty.all<Color>(const Color(0xffFB6236))),
+                      child: const Text(
+                        "Scan Coupon",
+                        style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500,fontSize: 19.94),
+                      )
+                    ),
                     const SizedBox(height: 21,),
                     ElevatedButton(onPressed: (){
                       showDialog(context: context, builder: (context) {
@@ -110,15 +114,47 @@ class _ResturantAppState extends State<ResturantApp> {
                           actionsPadding: const EdgeInsets.only(bottom: 30),
                           alignment: Alignment.center,
                           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(9)),
-                          content: Container(alignment: Alignment.center,width: 300, height: 200,child: const Text("This is an Alert", style: TextStyle(fontWeight: FontWeight.w500,fontSize: 26.04, color: Color(0xff573240)),)),
+                          content: Container(
+                            alignment: Alignment.center,
+                            width: 300,
+                            height: 200,
+                            child: const Text(
+                              "This is an Alert",
+                              style: TextStyle(fontWeight: FontWeight.w500,fontSize: 26.04, color: Color(0xff573240))
+                            )
+                          ),
                           actions: [
-                            Center(child: ElevatedButton(onPressed: (){
-                              Navigator.pop(context);
-                            }, style: ButtonStyle(fixedSize: WidgetStateProperty.all(const Size(225, 45)),shape: WidgetStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(9))),backgroundColor: WidgetStateProperty.all(const Color(0xffFB6236))),child: const Text('Close alert', style: TextStyle(fontSize: 26.04, fontWeight: FontWeight.w500, color: Colors.white),)))
+                            Center(
+                              child: ElevatedButton(
+                                onPressed: (){Navigator.pop(context);},
+                                style: ButtonStyle(
+                                  fixedSize: WidgetStateProperty.all(const Size(225, 45)),
+                                  shape: WidgetStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(9))),
+                                  backgroundColor: WidgetStateProperty.all(const Color(0xffFB6236))),
+                                  child: const Text(
+                                    'Close alert',
+                                    style: TextStyle(fontSize: 26.04, fontWeight: FontWeight.w500, color: Colors.white)
+                                    )
+                                  )
+                                )
                           ],
                         );
                       });
-                    }, style: ButtonStyle(elevation: WidgetStateProperty.all(5),shadowColor: WidgetStateProperty.all<Color>(Colors.black),fixedSize: WidgetStateProperty.all(const Size(319, 54)),shape: WidgetStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(9))),backgroundColor: WidgetStateProperty.all<Color>(const Color(0xffFB6236))), child: const Text("Show info",style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500,fontSize: 19.94))),
+                    }, style: ButtonStyle(
+                      elevation: WidgetStateProperty.all(5),
+                      shadowColor: WidgetStateProperty.all<Color>(Colors.black),
+                      fixedSize: WidgetStateProperty.all(const Size(319, 54)),
+                      shape: WidgetStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(9))),
+                      backgroundColor: WidgetStateProperty.all<Color>(const Color(0xffFB6236))),
+                      child: const Text(
+                        "Show info",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 19.94
+                        )
+                      )
+                    ),
                   ],
                 )
               ),
