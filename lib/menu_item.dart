@@ -10,13 +10,12 @@ class MenuItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         alignment: Alignment.center,
-        width: 100,
-        height: 30,
+        width: 64,
+        height: 33,
         decoration: BoxDecoration(borderRadius: BorderRadius.circular(4),color: color,boxShadow: [BoxShadow(color: Colors.black, offset: Offset(0, 3), blurRadius: 2)]),
         child: Text(
           itemName,
-          style: const TextStyle(
-              fontSize: 14, fontWeight: FontWeight.w400),
+          style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w300),
         ));
   }
 }
