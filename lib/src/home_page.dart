@@ -53,11 +53,15 @@ class _HomePageState extends State<HomePage> {
                             fontWeight: FontWeight.bold),
                         "Cheese Burger"),
                   ),
-                  ListTile(
+                  const ListTile(
                     textColor: Colors.white,
                     title: Text("ID"),
                     subtitle: Text("C13579246810"),
-                  )
+                  ),
+                  ClipRRect(
+                    borderRadius: const BorderRadius.all(Radius.circular(8)),
+                    child: Image.asset("assets/Code.jpg"),
+                  ),
                 ],
               ),
             ),
