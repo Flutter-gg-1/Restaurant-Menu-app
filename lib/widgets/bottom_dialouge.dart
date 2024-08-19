@@ -39,7 +39,8 @@ class BottomDialouge extends StatelessWidget {
                 children: [
                   Text(
                     listOfFood[index],
-                    style: const TextStyle(fontSize: 29.91, color: Colors.white),
+                    style:
+                        const TextStyle(fontSize: 29.91, color: Colors.white),
                   ),
                   const Text(
                     'ID',

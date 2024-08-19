@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 
-class Tabs extends StatelessWidget {
+class TabCard extends StatelessWidget {
   final String label;
   final int selected;
   final int index;
-  const Tabs(
+  const TabCard(
       {super.key, required this.label, this.selected = 0, this.index = 0});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 40,
       width: 64,
       child: Card(
-        shadowColor: Color.fromRGBO(0, 0, 0, 0.5),
+        shadowColor: const Color.fromRGBO(0, 0, 0, 0.5),
         elevation: 6,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(4),

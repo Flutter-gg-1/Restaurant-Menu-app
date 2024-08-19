@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class Food extends StatelessWidget {
+class FoodCard extends StatelessWidget {
   final String image;
   final String name;
   final String desc;
   final String rating;
   final double price;
-  const Food(
+  const FoodCard(
       {super.key,
       required this.image,
       required this.name,
@@ -16,13 +16,10 @@ class Food extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-   return Card(
-      
+    return Card(
       color: Colors.white,
-      shadowColor: Color.fromRGBO(0,0,0,0.5),
-      
+      shadowColor: const Color.fromRGBO(0, 0, 0, 0.5),
       elevation: 6,
-   
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10),
         child: Row(
@@ -40,14 +37,17 @@ class Food extends StatelessWidget {
                 Container(
                     padding: const EdgeInsets.symmetric(vertical: 10),
                     height: 120,
-                    width: 120,
+                    width: 108,
                     child: FittedBox(
                         fit: BoxFit.contain, child: Image.asset(image))),
               ],
             ),
+            const SizedBox(
+              width: 20,
+            ),
             SizedBox(
               height: 120,
-              width: 200,
+              width: 180,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -89,10 +89,15 @@ class Food extends StatelessWidget {
                               fontWeight: FontWeight.bold,
                               fontSize: 15),
                         ),
-                        Image.asset(
-                          'assets/images/plus.png',
-                          height: 22,
-                          width: 28,
+                        InkWell(
+                          onTap: () {
+                            
+                          },
+                          child: Image.asset(
+                            'assets/images/plus.png',
+                            height: 22,
+                            width: 28,
+                          ),
                         )
                       ],
                     ),
