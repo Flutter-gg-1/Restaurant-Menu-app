@@ -124,14 +124,23 @@ class _Lab2State extends State<Lab2> {
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(9)),
                                 backgroundColor: Colors.white,
-                                title: const Center(
-                                    child: Text(
-                                  'This is an Alert',
-                                  style: TextStyle(
-                                      fontSize: 26.04,
-                                      fontWeight: FontWeight.w500,
-                                      color: Color.fromRGBO(87, 50, 64, 1)),
-                                )),
+                                title: const SizedBox(
+                                  height: 294,
+                                  width: 319,
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        'This is an Alert',
+                                        style: TextStyle(
+                                            fontSize: 26.04,
+                                            fontWeight: FontWeight.w500,
+                                            color:
+                                                Color.fromRGBO(87, 50, 64, 1)),
+                                      ),
+                                    ],
+                                  ),
+                                ),
                                 actions: [
                                   Center(
                                     child: ElevatedButton(
