@@ -3,9 +3,7 @@ import 'package:alert_lab/dessert.dart';
 import 'package:alert_lab/dishes.dart';
 import 'package:alert_lab/drinks.dart';
 import 'package:alert_lab/pizza.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class AlertLab extends StatefulWidget {
   const AlertLab({super.key});
@@ -21,9 +19,10 @@ class _AlertLabState extends State<AlertLab> {
       length: 5,
       child: Scaffold(
         appBar: AppBar(
-          title: Text("Menu", style: TextStyle(fontWeight: FontWeight.bold)),
+          title:
+              const Text("Menu", style: TextStyle(fontWeight: FontWeight.bold)),
           bottom: PreferredSize(
-            preferredSize: Size.fromHeight(50),
+            preferredSize: const Size.fromHeight(50),
             child: Container(
               child: TabBar(
                 indicatorSize: TabBarIndicatorSize.tab,
@@ -32,44 +31,74 @@ class _AlertLabState extends State<AlertLab> {
                     Colors.black, // Text color for unselected tabs
                 indicator: BoxDecoration(
                   shape: BoxShape.rectangle,
-                  color: Color(0xffFB6236),
+                  color: const Color(0xffFB6236),
                   borderRadius: BorderRadius.circular(8),
                   boxShadow: [
                     BoxShadow(
                       color: Colors.grey.withOpacity(0.5),
                       blurRadius: 4,
                       spreadRadius: 1,
-                      offset: Offset(0, 2), // Shadow for the selected tab
+                      offset: const Offset(0, 2), // Shadow for the selected tab
                     ),
                   ],
                 ),
                 tabs: [
                   Container(
-                    child: Align(
+                    decoration: BoxDecoration(boxShadow: [
+                      BoxShadow(
+                          color: Colors.grey.withOpacity(0.5),
+                          blurRadius: 5,
+                          blurStyle: BlurStyle.outer)
+                    ]),
+                    child: const Align(
                       alignment: Alignment.center,
                       child: Text("Dishes"),
                     ),
                   ),
                   Container(
-                    child: Align(
+                    decoration: BoxDecoration(boxShadow: [
+                      BoxShadow(
+                          color: Colors.grey.withOpacity(0.5),
+                          blurRadius: 5,
+                          blurStyle: BlurStyle.outer)
+                    ]),
+                    child: const Align(
                       alignment: Alignment.center,
                       child: Text("Pizza"),
                     ),
                   ),
                   Container(
-                    child: Align(
+                    decoration: BoxDecoration(boxShadow: [
+                      BoxShadow(
+                          color: Colors.grey.withOpacity(0.5),
+                          blurRadius: 5,
+                          blurStyle: BlurStyle.outer)
+                    ]),
+                    child: const Align(
                       alignment: Alignment.center,
                       child: Text("Burger"),
                     ),
                   ),
                   Container(
-                    child: Align(
+                    decoration: BoxDecoration(boxShadow: [
+                      BoxShadow(
+                          color: Colors.grey.withOpacity(0.5),
+                          blurRadius: 5,
+                          blurStyle: BlurStyle.outer)
+                    ]),
+                    child: const Align(
                       alignment: Alignment.center,
                       child: Text("Drinks"),
                     ),
                   ),
                   Container(
-                    child: Align(
+                    decoration: BoxDecoration(boxShadow: [
+                      BoxShadow(
+                          color: Colors.grey.withOpacity(0.5),
+                          blurRadius: 5,
+                          blurStyle: BlurStyle.outer)
+                    ]),
+                    child: const Align(
                       alignment: Alignment.center,
                       child: Text("Dessert"),
                     ),
@@ -79,7 +108,7 @@ class _AlertLabState extends State<AlertLab> {
             ),
           ),
         ),
-        body: Column(
+        body: const Column(
           children: [
             Expanded(
               child: TabBarView(
