@@ -25,31 +25,40 @@ The restaurant menu app is well designed to offer a great user experience, its s
 
 - Note: A video of UI is uploaded in assets/video
 
-**Home Screen**
 
-<img src="./assets/images/screenshots/1.png" width="510" height="1120">
+**White Rice**
 
-
-<img src="./assets/images/screenshots/2.png" width="510" height="1120">
+<img src="./assets/images/screenshots/1.png" width="364" height="800">
 
 
-<img src="./assets/images/screenshots/3.png" width="510" height="1120">
+**Pizza**
+
+<img src="./assets/images/screenshots/2.png" width="364" height="800">
 
 
-<img src="./assets/images/screenshots/4.png" width="510" height="1120">
+**Cheese Burger**
+
+<img src="./assets/images/screenshots/3.png" width="364" height="800">
 
 
-<img src="./assets/images/screenshots/5.png" width="510" height="1120">
+**Coca Cola**
+
+<img src="./assets/images/screenshots/4.png" width="364" height="800">
+
+
+**Dessert**
+
+<img src="./assets/images/screenshots/5.png" width="364" height="800">
 
 
 **Bottom Dialouge**
 
-<img src="./assets/images/screenshots/6.png" width="510" height="1120">
+<img src="./assets/images/screenshots/6.png" width="364" height="800">
 
 
 **Alert Dialouge**
 
-<img src="./assets/images/screenshots/7.png" width="510" height="1120">
+<img src="./assets/images/screenshots/7.png" width="364" height="800">
 
 
 
