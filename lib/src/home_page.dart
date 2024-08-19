@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/const/color.dart';
+import 'package:flutter_application_1/widget/burger.dart';
+import 'package:flutter_application_1/widget/cake.dart';
+import 'package:flutter_application_1/widget/dishes.dart';
+import 'package:flutter_application_1/widget/drinks.dart';
+import 'package:flutter_application_1/widget/pizza.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -108,11 +113,11 @@ class _HomePageState extends State<HomePage> {
               const Flexible(
                 child: TabBarView(
                   children: [
-                    Dshis(),
-                    Pizaa(),
-                    Dshis(),
-                    Dshis(),
-                    Dshis(),
+                    Dishes(),
+                    Pizza(),
+                    Burger(),
+                    Drinks(),
+                    Cake(),
                   ],
                 ),
               ),
@@ -156,116 +161,6 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
-    );
-  }
-}
-
-class Dshis extends StatelessWidget {
-  const Dshis({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return ListView(
-      children: [
-        Card(
-          elevation: 4,
-          color: Colors.white,
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(0.0)),
-          child: ListTile(
-            leading: const SizedBox(
-              height: 100,
-              width: 100,
-              child: Badge(
-                  alignment: Alignment.topLeft,
-                  backgroundColor: Color.fromARGB(0, 244, 67, 54),
-                  label: Icon(color: Colors.red, Icons.favorite_border),
-                  child: Placeholder()),
-            ),
-            title: const Text("White Rice"),
-            subtitle: Column(
-              children: [
-                const Text("Basmati rice with vagtibale"),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Icon(color: orange, Icons.star),
-                    Text(style: TextStyle(color: orange), "4.5")
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    const Text(
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                        "AED 45"),
-                    Container(
-                        color: orange,
-                        child: const Icon(color: Colors.white, Icons.add))
-                  ],
-                )
-              ],
-            ),
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-class Pizaa extends StatelessWidget {
-  const Pizaa({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return ListView(
-      children: [
-        Card(
-          elevation: 4,
-          color: Colors.white,
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(0.0)),
-          child: ListTile(
-            leading: const SizedBox(
-              height: 100,
-              width: 100,
-              child: Badge(
-                  alignment: Alignment.topLeft,
-                  backgroundColor: Color.fromARGB(0, 244, 67, 54),
-                  label: Icon(color: Colors.red, Icons.favorite_border),
-                  child: Placeholder()),
-            ),
-            title: const Text("Pizaa"),
-            subtitle: Column(
-              children: [
-                const Text("Basmati rice with vagtibale"),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Icon(color: orange, Icons.star),
-                    Text(style: TextStyle(color: orange), "4.5")
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    const Text(
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                        "AED 45"),
-                    Container(
-                        color: orange,
-                        child: const Icon(color: Colors.white, Icons.add))
-                  ],
-                )
-              ],
-            ),
-          ),
-        ),
-      ],
     );
   }
 }
