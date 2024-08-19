@@ -1,4 +1,5 @@
 import 'package:alert_lab/burger.dart';
+import 'package:alert_lab/dessert.dart';
 import 'package:alert_lab/dishes.dart';
 import 'package:alert_lab/drinks.dart';
 import 'package:alert_lab/pizza.dart';
@@ -82,13 +83,7 @@ class _AlertLabState extends State<AlertLab> {
           children: [
             Expanded(
               child: TabBarView(
-                children: [
-                  Dishes(),
-                  Pizza(),
-                  Burger(),
-                  Drinks(),
-                  Center(child: Text("Dessert Content")),
-                ],
+                children: [Dishes(), Pizza(), Burger(), Drinks(), Dessert()],
               ),
             ),
           ],
