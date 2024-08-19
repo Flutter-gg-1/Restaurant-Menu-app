@@ -12,11 +12,11 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     List<Widget> myTabs = [
-      const Text("Dishis"),
+      const SizedBox(height: 40, child: Center(child: Text("Dishes"))),
       const Text("Pizaa"),
-      const Text("Dishis"),
-      const Text("Dishis"),
-      const Text("Dishis"),
+      const Text("Burger"),
+      const Text("Drinks"),
+      const Text("Dessert"),
     ];
     return DefaultTabController(
       length: myTabs.length,
@@ -25,19 +25,28 @@ class _HomePageState extends State<HomePage> {
           title: const Text(
               style: TextStyle(fontWeight: FontWeight.bold), "Menue"),
           bottom: TabBar(
+            indicatorSize: TabBarIndicatorSize.tab,
             dividerColor: Colors.white,
             labelColor: Colors.white,
             indicator: BoxDecoration(
-                color: orange, borderRadius: BorderRadius.circular(5)),
+                border: Border.all(width: 100),
+                boxShadow: const [
+                  BoxShadow(
+                      offset: Offset(1, 1),
+                      color: Color.fromARGB(102, 0, 0, 0),
+                      blurRadius: 1),
+                ],
+                color: orange,
+                borderRadius: BorderRadius.circular(4)),
             indicatorColor: orange,
             tabs: myTabs,
           ),
         ),
-        body: const SafeArea(
+        body: SafeArea(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Flexible(
+              const Flexible(
                 child: TabBarView(
                   children: [
                     Dshis(),
@@ -46,6 +55,42 @@ class _HomePageState extends State<HomePage> {
                     Dshis(),
                     Dshis(),
                   ],
+                ),
+              ),
+              SizedBox(
+                width: MediaQuery.of(context).size.width / 1.6,
+                child: FilledButton(
+                  style: ButtonStyle(
+                    shape: WidgetStateProperty.all(const RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(7)))),
+                    elevation: WidgetStateProperty.all(5),
+                    backgroundColor: WidgetStateProperty.all(orange),
+                  ),
+                  onPressed: () {},
+                  child: const Text(
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                          color: Colors.white),
+                      "Scan Coupon"),
+                ),
+              ),
+              SizedBox(
+                width: MediaQuery.of(context).size.width / 1.6,
+                child: FilledButton(
+                  style: ButtonStyle(
+                    shape: WidgetStateProperty.all(const RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(7)))),
+                    elevation: WidgetStateProperty.all(5),
+                    backgroundColor: WidgetStateProperty.all(orange),
+                  ),
+                  onPressed: () {},
+                  child: const Text(
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                          color: Colors.white),
+                      "Show info"),
                 ),
               ),
             ],
@@ -65,23 +110,17 @@ class Dshis extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       children: [
-        Container(
-          decoration: BoxDecoration(
-            boxShadow: [
-              BoxShadow(
-                color:
-                    const Color.fromARGB(255, 233, 231, 231).withOpacity(0.5),
-                spreadRadius: 2,
-                blurRadius: 5,
-                offset: const Offset(4, 5), // changes position of shadow
-              ),
-            ],
-          ),
+        Card(
+          elevation: 4,
+          color: Colors.white,
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(0.0)),
           child: ListTile(
             leading: const SizedBox(
               height: 100,
               width: 100,
               child: Badge(
+                  alignment: Alignment.topLeft,
                   backgroundColor: Color.fromARGB(0, 244, 67, 54),
                   label: Icon(color: Colors.red, Icons.favorite_border),
                   child: Placeholder()),
@@ -127,11 +166,16 @@ class Pizaa extends StatelessWidget {
     return ListView(
       children: [
         Card(
+          elevation: 4,
+          color: Colors.white,
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(0.0)),
           child: ListTile(
             leading: const SizedBox(
               height: 100,
               width: 100,
               child: Badge(
+                  alignment: Alignment.topLeft,
                   backgroundColor: Color.fromARGB(0, 244, 67, 54),
                   label: Icon(color: Colors.red, Icons.favorite_border),
                   child: Placeholder()),
