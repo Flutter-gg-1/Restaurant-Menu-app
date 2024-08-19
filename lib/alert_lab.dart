@@ -1,4 +1,6 @@
+import 'package:alert_lab/burger.dart';
 import 'package:alert_lab/dishes.dart';
+import 'package:alert_lab/drinks.dart';
 import 'package:alert_lab/pizza.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -83,8 +85,8 @@ class _AlertLabState extends State<AlertLab> {
                 children: [
                   Dishes(),
                   Pizza(),
-                  Center(child: Text("Burger Content")),
-                  Center(child: Text("Drinks Content")),
+                  Burger(),
+                  Drinks(),
                   Center(child: Text("Dessert Content")),
                 ],
               ),

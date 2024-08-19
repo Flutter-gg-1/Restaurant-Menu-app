@@ -1,14 +1,13 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class Burger extends StatefulWidget {
-  const Burger({super.key});
+class Drinks extends StatefulWidget {
+  const Drinks({super.key});
 
   @override
-  State<Burger> createState() => _BurgerState();
+  State<Drinks> createState() => _DrinksState();
 }
 
-class _BurgerState extends State<Burger> {
+class _DrinksState extends State<Drinks> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,7 +50,7 @@ class _BurgerState extends State<Burger> {
                 ),
                 Row(
                   children: [
-                    Image.asset('assets/burger.png'),
+                    Image.asset('assets/soft-drink.png'),
                     SizedBox(
                       width: 10,
                     ),
@@ -62,10 +61,10 @@ class _BurgerState extends State<Burger> {
                           height: 30,
                         ),
                         Text(
-                          "Cheese Burger",
+                          "Coca Cola",
                           style: TextStyle(fontWeight: FontWeight.bold),
                         ),
-                        Text("Bacon Cheeseburger"),
+                        Text("Can Coke"),
                         Row(
                           children: [
                             Icon(
@@ -84,7 +83,7 @@ class _BurgerState extends State<Burger> {
                         Row(
                           children: [
                             Text(
-                              "AED 55.9",
+                              "AED 3.9",
                               style: TextStyle(fontWeight: FontWeight.bold),
                             ),
                             SizedBox(
