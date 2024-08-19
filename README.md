@@ -1,7 +1,30 @@
 # Restaurant Menu app
 
-**Complete and submit the TabBar, Bottom Sheet, and Alert dialog Lab of the given design**
+The projrct is an Restaurant Menu app shows different catogrys.  
 
-**Note: Don't forget to include the Screenshots of your implementation**
 
-**Deadline: at 9:59 am, 20 Aug 2024**
+
+
+
+## project Details:
+
+
+-TapBar to show catogries
+
+-TapCustomStyle to style the taps in Continar
+
+-OrderWidget custom widget to organize the order elemnt in Continar
+
+-showModalBottomSheet to show scan coupon detiels
+
+-showAlert function to show alert when tap Show info 
+
+
+## project output:
+
+
+
+
+
+## Author:
+Rahaf Alghamdi
