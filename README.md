@@ -1,4 +1,4 @@
-# TabBar-Lab
+# Restaurant Menu app
 
 **Complete and submit the TabBar, Bottom Sheet, and Alert dialog Lab for the given design**
 
