@@ -9,8 +9,8 @@ class AlertMessage extends StatelessWidget {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(9)),
       backgroundColor: Colors.white,
       title: const SizedBox(
-        height: 294,
-        width: 319,
+        height: 224,
+        width: 300,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
