@@ -99,7 +99,7 @@ class _ResturantAppState extends State<ResturantApp> {
                           ),
                         );
                       });
-                    }, style: ButtonStyle(fixedSize: WidgetStateProperty.all(const Size(319, 45)),shape: WidgetStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(9))),backgroundColor: WidgetStateProperty.all<Color>(const Color(0xffFB6236))), child: const Text("Scan Coupon",style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500,fontSize: 19.94),)),
+                    }, style: ButtonStyle(elevation: WidgetStateProperty.all(5),shadowColor: WidgetStateProperty.all<Color>(Colors.black),fixedSize: WidgetStateProperty.all(const Size(319, 54)),shape: WidgetStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(9))),backgroundColor: WidgetStateProperty.all<Color>(const Color(0xffFB6236))), child: const Text("Scan Coupon",style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500,fontSize: 19.94),)),
                     const SizedBox(height: 21,),
                     ElevatedButton(onPressed: (){
                       showDialog(context: context, builder: (context) {
@@ -118,7 +118,7 @@ class _ResturantAppState extends State<ResturantApp> {
                           ],
                         );
                       });
-                    }, style: ButtonStyle(fixedSize: WidgetStateProperty.all(const Size(319, 45)),shape: WidgetStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(9))),backgroundColor: WidgetStateProperty.all<Color>(const Color(0xffFB6236))), child: const Text("Show info",style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500,fontSize: 19.94))),
+                    }, style: ButtonStyle(elevation: WidgetStateProperty.all(5),shadowColor: WidgetStateProperty.all<Color>(Colors.black),fixedSize: WidgetStateProperty.all(const Size(319, 54)),shape: WidgetStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(9))),backgroundColor: WidgetStateProperty.all<Color>(const Color(0xffFB6236))), child: const Text("Show info",style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500,fontSize: 19.94))),
                   ],
                 )
               ),
