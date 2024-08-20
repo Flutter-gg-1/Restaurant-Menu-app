@@ -124,26 +124,26 @@ class Card extends StatelessWidget {
                   // First row
                   Text(
                     title,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 14.0,
                     ),
                   ),
 
                   // Second row
-                  Text(desc, style: TextStyle(fontSize: 13)),
+                  Text(desc, style: const TextStyle(fontSize: 13)),
 
                   // Third row
                   Row(
                     children: [
-                      Icon(
+                      const Icon(
                         Icons.star,
                         color: Color.fromARGB(255, 251, 97, 54),
                         size: 16.0,
                       ),
                       Text(
                         rate,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 11,
                           color: Color.fromARGB(255, 251, 97, 54),
@@ -151,7 +151,7 @@ class Card extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: 8.0),
+                  const SizedBox(height: 8.0),
 
                   // Fourth row
                   Row(
@@ -159,12 +159,12 @@ class Card extends StatelessWidget {
                     children: [
                       Text(
                         price,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 15,
                         ),
                       ),
-                      Row(
+                      const Row(
                         children: [
                           Icon(
                             Icons.add_box,
@@ -184,7 +184,25 @@ class Card extends StatelessWidget {
     ),
           const Spacer(),
       ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          showModalBottomSheet(context: context, builder: (context){
+            return Container(
+              color: Color.fromARGB(255, 251, 97, 54),
+              height: 400,
+              width: 330,
+                child: Column(
+                  children: [
+                    Text('Coupons',  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: const Color.fromARGB(255, 255, 255, 255))),
+                    Text('Cheese Burger', style: TextStyle(fontSize: 20, color: const Color.fromARGB(255, 255, 255, 255))),
+                    Text('ID', style: TextStyle(fontSize: 11, color: const Color.fromARGB(255, 255, 255, 255))),
+                    Text('C1487837237208', style: TextStyle(fontSize: 11, color: const Color.fromARGB(255, 255, 255, 255))),
+                    Image.asset('asset/Code.png'),
+                  ],
+
+                
+              ),           );
+          });
+        },
         style: ElevatedButton.styleFrom(
           fixedSize: const Size(300, 40),
           backgroundColor: const Color.fromARGB(255, 251, 97, 54),
