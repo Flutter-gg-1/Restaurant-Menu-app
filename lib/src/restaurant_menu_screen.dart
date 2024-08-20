@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class RestaurantScreen extends StatelessWidget {
   const RestaurantScreen({super.key});
@@ -25,6 +24,7 @@ class RestaurantScreen extends StatelessWidget {
           ),
           bottom: TabBar(
               //onTap:
+
               dividerColor: Colors.transparent,
               indicator: BoxDecoration(
                 boxShadow: [
@@ -42,54 +42,115 @@ class RestaurantScreen extends StatelessWidget {
               ),
               labelColor: Colors.black,
               tabs: [
-                Container(
-                  height: 33,
-                  width: 64,
-                  decoration: BoxDecoration(
-                    color: const Color(0xffFFFFFF),
-                    borderRadius: BorderRadius.circular(20),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.3),
-                        spreadRadius: 2,
-                        blurRadius: 5,
-                        offset: const Offset(0, 3),
-                      ),
-                    ],
+                Material(
+                  elevation: 8,
+                  surfaceTintColor: Colors.transparent,
+                  shadowColor: Colors.transparent,
+                  color: Colors.transparent,
+                  child: Container(
+                    height: 33,
+                    width: 64,
+                    decoration: BoxDecoration(
+                        border: Border.all(width: 0.1),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.grey.shade600,
+                              blurStyle: BlurStyle.outer,
+                              blurRadius: 1,
+                              offset: const Offset(0, 0.1))
+                        ],
+                        color: Colors.transparent,
+                        borderRadius: BorderRadius.circular(8)),
+                    child: const Center(child: Text('Dishes')),
                   ),
-                  child: const Center(child: Text('Dishes')),
                 ),
-                Container(
-                  height: 33,
-                  width: 64,
-                  decoration: BoxDecoration(
-                      color: Colors.transparent,
-                      borderRadius: BorderRadius.circular(4)),
-                  child: const Center(child: Text('Pizza')),
+                Material(
+                  elevation: 8,
+                  surfaceTintColor: Colors.transparent,
+                  shadowColor: Colors.transparent,
+                  color: Colors.transparent,
+                  child: Container(
+                    height: 33,
+                    width: 64,
+                    decoration: BoxDecoration(
+                        border: Border.all(width: 0.1),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.grey.shade600,
+                              blurStyle: BlurStyle.outer,
+                              blurRadius: 1,
+                              offset: const Offset(0, 0.1))
+                        ],
+                        color: Colors.transparent,
+                        borderRadius: BorderRadius.circular(8)),
+                    child: const Center(child: Text('Pizza')),
+                  ),
                 ),
-                Container(
-                  height: 33,
-                  width: 64,
-                  decoration: BoxDecoration(
-                      color: Colors.transparent,
-                      borderRadius: BorderRadius.circular(4)),
-                  child: const Center(child: Text('Burger')),
+                Material(
+                  elevation: 8,
+                  surfaceTintColor: Colors.transparent,
+                  shadowColor: Colors.transparent,
+                  color: Colors.transparent,
+                  child: Container(
+                    height: 33,
+                    width: 64,
+                    decoration: BoxDecoration(
+                        border: Border.all(width: 0.1),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.grey.shade600,
+                              blurStyle: BlurStyle.outer,
+                              blurRadius: 1,
+                              offset: const Offset(0, 0.1))
+                        ],
+                        color: Colors.transparent,
+                        borderRadius: BorderRadius.circular(8)),
+                    child: const Center(child: Text('Burger')),
+                  ),
                 ),
-                Container(
-                  height: 33,
-                  width: 64,
-                  decoration: BoxDecoration(
-                      color: Colors.transparent,
-                      borderRadius: BorderRadius.circular(4)),
-                  child: const Center(child: Text('Drinks')),
+                Material(
+                  elevation: 8,
+                  surfaceTintColor: Colors.transparent,
+                  shadowColor: Colors.transparent,
+                  color: Colors.transparent,
+                  child: Container(
+                    height: 33,
+                    width: 64,
+                    decoration: BoxDecoration(
+                        border: Border.all(width: 0.1),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.grey.shade600,
+                              blurStyle: BlurStyle.outer,
+                              blurRadius: 1,
+                              offset: const Offset(0, 0.1))
+                        ],
+                        color: Colors.transparent,
+                        borderRadius: BorderRadius.circular(8)),
+                    child: const Center(child: Text('Drinks')),
+                  ),
                 ),
-                Container(
-                  height: 33,
-                  width: 64,
-                  decoration: BoxDecoration(
-                      color: Colors.transparent,
-                      borderRadius: BorderRadius.circular(50)),
-                  child: const Center(child: Text('Dessert')),
+                Material(
+                  elevation: 8,
+                  surfaceTintColor: Colors.transparent,
+                  shadowColor: Colors.transparent,
+                  color: Colors.transparent,
+                  child: Container(
+                    height: 33,
+                    width: 64,
+                    decoration: BoxDecoration(
+                        border: Border.all(width: 0.1),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.grey.shade600,
+                              blurStyle: BlurStyle.outer,
+                              blurRadius: 1,
+                              offset: const Offset(0, 0.1))
+                        ],
+                        color: Colors.transparent,
+                        borderRadius: BorderRadius.circular(8)),
+                    child: const Center(child: Text('Dessert')),
+                  ),
                 ),
               ]),
         ),
