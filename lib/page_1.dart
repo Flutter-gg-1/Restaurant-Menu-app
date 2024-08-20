@@ -1,15 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_6/common.dart';
 
-class Page1 extends StatelessWidget {
+class Page1 extends StatefulWidget {
   const Page1({super.key});
 
   @override
+  State<Page1> createState() => _Page1State();
+}
+
+class _Page1State extends State<Page1> {
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+
+  Color color1 = const Color(0xffFB6236);
+
+  @override
   Widget build(BuildContext context) {
-    Color color = const Color(0xffFB6236);
     return DefaultTabController(
       length: 5,
       child: Scaffold(
+        key: _scaffoldKey,
         appBar: AppBar(
             title: const Text('Menu',
                 style: TextStyle(
@@ -65,7 +74,7 @@ class Page1 extends StatelessWidget {
                     children: [
                       const SizedBox(height: 50),
                       myContainer(),
-                      myButton(),
+                      myButton(inputKey: _scaffoldKey),
                     ],
                   ),
                 ),

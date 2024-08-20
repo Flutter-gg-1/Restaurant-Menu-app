@@ -96,7 +96,7 @@ Widget myContainer() {
   );
 }
 
-Widget myButton() {
+Widget myButton({required GlobalKey<ScaffoldState> inputKey}) {
   return Column(
     children: [
       const SizedBox(height: 250),
@@ -126,7 +126,16 @@ Widget myButton() {
             backgroundColor: WidgetStateProperty.all<Color>(
                 const Color.fromRGBO(251, 98, 54, 1)),
           ),
-          onPressed: () {},
+          onPressed: () {
+            inputKey.currentState!.showBottomSheet((context) => Container(
+                  color: Colors.white,
+                  height: 300,
+                  width: double.infinity,
+                  child: const Center(
+                    child: Text('Info'),
+                  ),
+                ));
+          },
           child: const Text(
             'Show info',
             style: TextStyle(color: Colors.white),
