@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class MenuItem extends StatelessWidget {
+class Section extends StatelessWidget {
 
   final String itemName;
   final Color color;
-  const MenuItem({super.key, required this.itemName, required this.color});
+  const Section({super.key, required this.itemName, required this.color});
 
   @override
   Widget build(BuildContext context) {

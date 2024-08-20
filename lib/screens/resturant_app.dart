@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';                 // imports material design widgets and properities
 import 'package:resturant_app/widgets/food_item.dart';  // widget represents a food item (rice - coke ... etc)
-import 'package:resturant_app/widgets/menu_item.dart';  // widget represents a menu item (Dishes - Pizza... etc)
-import 'package:resturant_app/resturant_data.dart';     // data of resturant, contains menu items and food items
+import 'package:resturant_app/widgets/section.dart';    // widget represents a section in menu (Dishes - Pizza... etc)
+import 'package:resturant_app/resturant_data.dart';     // data of resturant, contains menu sections and food items
 
 class ResturantApp extends StatefulWidget {
   const ResturantApp({super.key});
@@ -13,7 +13,7 @@ class ResturantApp extends StatefulWidget {
 class _ResturantAppState extends State<ResturantApp> {
 
   int selected = 0;
-  List<String> menuItems = ["Dishes","Pizza","Burger","Drinks","Dessert"];
+  List<String> sections = ["Dishes","Pizza","Burger","Drinks","Dessert"];
 
   @override
   Widget build(BuildContext context) {
@@ -37,28 +37,28 @@ class _ResturantAppState extends State<ResturantApp> {
                     selected = value;
                   });
                 },
-                tabs: List.generate(menuItems.length, (index){
-                  return MenuItem(itemName: menuItems[index], color: selected==index ? const Color(0xffFB6236) : Colors.white);
+                tabs: List.generate(sections.length, (index){
+                  return Section(itemName: sections[index], color: selected==index ? const Color(0xffFB6236) : Colors.white);
                 }),
               ),
               const SizedBox(height: 74,),
               Expanded(
                 child: TabBarView(
                   physics: const NeverScrollableScrollPhysics(),
-                  children: List.generate(menu.length, (menuItemIndex){
+                  children: List.generate(menu.length, (sectionIndex){
                     return Center(
                       child: ListView.builder(
-                        itemCount: menu[menuItemIndex].length,
+                        itemCount: menu[sectionIndex].length,
                         itemBuilder: (context,foodItemIndex) {
                           return Center(
                           child: FoodItem(
-                            foodDesc: menu[menuItemIndex][foodItemIndex]['food_desc'],
-                            foodName: menu[menuItemIndex][foodItemIndex]['food_name'],
-                            foodPic: menu[menuItemIndex][foodItemIndex]['food_pic'],
-                            foodPrice: menu[menuItemIndex][foodItemIndex]['food_price'],
-                            foodRate: menu[menuItemIndex][foodItemIndex]['food_rate'],
-                            picHeight: menu[menuItemIndex][foodItemIndex]['pic_height'],
-                            picWidth: menu[menuItemIndex][foodItemIndex]['pic_width']
+                            foodDesc: menu[sectionIndex][foodItemIndex]['food_desc'],
+                            foodName: menu[sectionIndex][foodItemIndex]['food_name'],
+                            foodPic: menu[sectionIndex][foodItemIndex]['food_pic'],
+                            foodPrice: menu[sectionIndex][foodItemIndex]['food_price'],
+                            foodRate: menu[sectionIndex][foodItemIndex]['food_rate'],
+                            picHeight: menu[sectionIndex][foodItemIndex]['pic_height'],
+                            picWidth: menu[sectionIndex][foodItemIndex]['pic_width']
                           )
                         );
                       })
