@@ -78,17 +78,41 @@ class _Page1State extends State<Page1> {
                     ],
                   ),
                 ),
-                const Center(
-                  child: Text('Pizza'),
+                Center(
+                  child: Column(
+                    children: [
+                      const SizedBox(height: 50),
+                      myContainer2(),
+                      myButton(inputKey: _scaffoldKey),
+                    ],
+                  ),
                 ),
-                const Center(
-                  child: Text('Burger'),
+                Center(
+                  child: Column(
+                    children: [
+                      const SizedBox(height: 50),
+                      myContainer2(),
+                      myButton(inputKey: _scaffoldKey),
+                    ],
+                  ),
                 ),
-                const Center(
-                  child: Text('Drinks'),
+                Center(
+                  child: Column(
+                    children: [
+                      const SizedBox(height: 50),
+                      myContainer2(),
+                      myButton(inputKey: _scaffoldKey),
+                    ],
+                  ),
                 ),
-                const Center(
-                  child: Text('Dessert'),
+                Center(
+                  child: Column(
+                    children: [
+                      const SizedBox(height: 50),
+                      myContainer2(),
+                      myButton(inputKey: _scaffoldKey),
+                    ],
+                  ),
                 ),
               ]),
             ),
