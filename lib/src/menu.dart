@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:restaurant_menu_app/widget/food_card.dart';
-import 'package:restaurant_menu_app/widget/food_view.dart';
-import 'package:restaurant_menu_app/widget/foodoption.dart';
 import 'package:restaurant_menu_app/widget/menu_button.dart';
 import 'package:restaurant_menu_app/widget/menu_option.dart';
 

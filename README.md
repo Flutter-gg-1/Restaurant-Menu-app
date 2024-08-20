@@ -1,16 +1,33 @@
-# restaurant_menu_app
+# Restaurant Menu App
 
-A new Flutter project.
+A Flutter application with awesome UI to represent a Restaurant Menu
 
-## Getting Started
+## Main Screen
+Contain 5 tabs to allow customer to discover the menu based on food types
 
-This project is a starting point for a Flutter application.
+![alt text](./assest/readme/image.png)
 
-A few resources to get you started if this is your first Flutter project:
+## Main Widget
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- `TabBar` & `TabBarView`
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![alt text](./assest/readme/image-1.png)
+
+- `showDialog` & `AlertDialog`
+
+![alt text](./assest/readme/image-2.png)
+
+- `showModalBottomSheet`
+
+![alt text](./assest/readme/image-3.png)
+
+- `DefaultTabController`
+
+![alt text](./assest/readme/image-4.png)
+
+## Output
+![alt text](./assest/readme/menuGif.gif)
+
+Feel free to use with account name mentioned
+
+by `Basel-75` Github
