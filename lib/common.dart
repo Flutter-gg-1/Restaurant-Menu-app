@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-Widget myContainer() {
+Widget myContainer({required String imagePath}) {
   return Container(
     width: 359,
     height: 190,
@@ -38,7 +38,7 @@ Widget myContainer() {
         Row(
           children: [
             Row(children: [
-              Image.asset('assets/1.png', width: 100),
+              Image.asset(imagePath, width: 100),
               const SizedBox(width: 20),
               const Column(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -134,7 +134,7 @@ Widget myContainer2() {
         Row(
           children: [
             Row(children: [
-              Image.asset('assets/1.png', width: 100),
+              Image.asset('assets/2.png', width: 100),
               const SizedBox(width: 20),
               const Column(
                 mainAxisAlignment: MainAxisAlignment.start,
