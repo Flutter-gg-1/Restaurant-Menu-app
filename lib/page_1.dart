@@ -73,7 +73,8 @@ class _Page1State extends State<Page1> {
                   child: Column(
                     children: [
                       const SizedBox(height: 50),
-                      myContainer(imagePath: 'assets/2.png'),
+                      myContainer(
+                          imagePath: 'assets/2.png', title: 'White Rice'),
                       myButton(inputKey: _scaffoldKey),
                     ],
                   ),

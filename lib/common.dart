@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-Widget myContainer({required String imagePath}) {
+Widget myContainer({required String imagePath, required String title}) {
   return Container(
     width: 359,
     height: 190,
@@ -18,18 +18,18 @@ Widget myContainer({required String imagePath}) {
     child: Column(
       children: [
         const SizedBox(height: 10),
-        const Padding(
-          padding: EdgeInsets.only(left: 10),
+        Padding(
+          padding: const EdgeInsets.only(left: 10),
           child: Row(
             children: [
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Row(
                 children: [
-                  Icon(Icons.favorite_border),
-                  SizedBox(width: 100),
-                  Text('White Rice',
-                      style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                  const Icon(Icons.favorite_border),
+                  const SizedBox(width: 100),
+                  Text(title,
+                      style: const TextStyle(
+                          fontSize: 16, fontWeight: FontWeight.bold)),
                 ],
               ),
             ],
