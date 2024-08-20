@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 Widget myContainer() {
   return Container(
     width: 359,
-    height: 160,
+    height: 190,
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(4),
       color: Colors.white,
@@ -25,7 +25,7 @@ Widget myContainer() {
               SizedBox(height: 20),
               Row(
                 children: [
-                  Icon(Icons.heart_broken_sharp),
+                  Icon(Icons.favorite_border),
                   SizedBox(width: 100),
                   Text('White Rice',
                       style:
@@ -65,9 +65,12 @@ Widget myContainer() {
           ],
         ),
         Padding(
-          padding: const EdgeInsets.only(left: 290, top: 30),
-          child: Image.asset('assets/b.png', width: 40),
-        ),
+            padding: const EdgeInsets.only(left: 290, top: 30),
+            child: FloatingActionButton(
+              onPressed: () {},
+              backgroundColor: Colors.white,
+              child: Image.asset('assets/b.png'),
+            )),
       ],
     ),
   );
