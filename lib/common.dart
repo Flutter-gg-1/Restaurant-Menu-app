@@ -112,11 +112,27 @@ Widget myButton({required GlobalKey<ScaffoldState> inputKey}) {
           ),
           onPressed: () {
             inputKey.currentState!.showBottomSheet((context) => Container(
-                  color: Colors.white,
-                  height: 300,
-                  width: double.infinity,
-                  child: const Center(
-                    child: Text('Coming Soon'),
+                  color: const Color.fromRGBO(251, 98, 54, 1),
+                  height: 350,
+                  width: 550,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      const Text('Coupons',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold)),
+                      const Divider(),
+                      const SizedBox(height: 15),
+                      const Text('Cheese Burger',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold)),
+                      Flexible(
+                          child: Image.asset('assets/par.png', width: 250)),
+                    ],
                   ),
                 ));
           },
