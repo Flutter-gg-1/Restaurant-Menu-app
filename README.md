@@ -58,7 +58,7 @@ Image (6) : FoodItem widget result
 ###### 2.2.2 Section
 `Section` widget represents menu items or "What are the types of food this resturant can provide to me". See Image (7).
 
-<img src='./readme_media/appbar.png' alt='App bar' style='border:5px solid #1c1561'>
+<img src='./readme_media/tabbar.png' alt='App bar' style='border:5px solid #1c1561'>
 
 Image (7) : Section widget result
 
