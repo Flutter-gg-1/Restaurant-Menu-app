@@ -74,6 +74,20 @@ class _Page1State extends State<Page1> {
                     children: [
                       const SizedBox(height: 50),
                       myContainer(
+                          imagePath: 'assets/1.png',
+                          title: 'White Rice',
+                          text: 'Basmati rice with Vegetable',
+                          rate: '4.5',
+                          price: 'AED 45'),
+                      myButton(inputKey: _scaffoldKey),
+                    ],
+                  ),
+                ),
+                Center(
+                  child: Column(
+                    children: [
+                      const SizedBox(height: 50),
+                      myContainer(
                           imagePath: 'assets/2.png',
                           title: 'White Rice',
                           text: 'Basmati rice with Vegetable',
@@ -83,7 +97,48 @@ class _Page1State extends State<Page1> {
                     ],
                   ),
                 ),
-                
+                Center(
+                  child: Column(
+                    children: [
+                      const SizedBox(height: 50),
+                      myContainer(
+                          imagePath: 'assets/3.png',
+                          title: 'White Rice',
+                          text: 'Basmati rice with Vegetable',
+                          rate: '4.5',
+                          price: 'AED 45'),
+                      myButton(inputKey: _scaffoldKey),
+                    ],
+                  ),
+                ),
+                Center(
+                  child: Column(
+                    children: [
+                      const SizedBox(height: 50),
+                      myContainer(
+                          imagePath: 'assets/4.png',
+                          title: 'White Rice',
+                          text: 'Basmati rice with Vegetable',
+                          rate: '4.5',
+                          price: 'AED 45'),
+                      myButton(inputKey: _scaffoldKey),
+                    ],
+                  ),
+                ),
+                Center(
+                  child: Column(
+                    children: [
+                      const SizedBox(height: 50),
+                      myContainer(
+                          imagePath: 'assets/5.png',
+                          title: 'White Rice',
+                          text: 'Basmati rice with Vegetable',
+                          rate: '4.5',
+                          price: 'AED 45'),
+                      myButton(inputKey: _scaffoldKey),
+                    ],
+                  ),
+                ),
               ]),
             ),
           ],
