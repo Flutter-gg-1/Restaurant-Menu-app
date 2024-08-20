@@ -665,10 +665,90 @@ class _BootomState extends State<Bootom> with SingleTickerProviderStateMixin {
               ]),
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                showModalBottomSheet(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return Container(
+                      height: 548.43,
+                      width: 349,
+                      decoration: BoxDecoration(
+                          color: const Color(0xffFB6236),
+                          borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(25),
+                              topRight: Radius.circular(25))),
+                      child: Center(
+                        child: Column(children: [
+                          Container(
+                            margin: EdgeInsets.only(left: 17, right: 251),
+                            child: FittedBox(
+                              fit: BoxFit.none,
+                              child: Text(
+                                'Coupons',
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 20),
+                              ),
+                            ),
+                          ),
+                          Divider(),
+                          Container(
+                            margin:
+                                EdgeInsets.only(top: 13, right: 200, left: 10),
+                            child: FittedBox(
+                              fit: BoxFit.none,
+                              child: Text(
+                                "CheeseBrger",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 20),
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 26,
+                          ),
+                          Container(
+                            margin:
+                                EdgeInsets.only(top: 13, right: 300, left: 10),
+                            child: FittedBox(
+                              fit: BoxFit.none,
+                              child: Text(
+                                "ID",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 20),
+                              ),
+                            ),
+                          ),
+                          Container(
+                            margin:
+                                EdgeInsets.only(top: 13, right: 180, left: 10),
+                            child: FittedBox(
+                              fit: BoxFit.none,
+                              child: Text(
+                                "C13579246810",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 20),
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 80,
+                          ),
+                          Image.asset('assets/Code.png')
+                        ]),
+                      ),
+                    );
+                  },
+                  shape: const RoundedRectangleBorder(
+                    borderRadius: BorderRadius.vertical(
+                      top: const Radius.circular(25.0),
+                    ),
+                  ),
+                  isScrollControlled: true,
+                );
+              },
               style: ElevatedButton.styleFrom(
                 foregroundColor: Colors.white,
-                backgroundColor: Color(0xffFB6236),
+                backgroundColor: const Color(0xffFB6236),
                 fixedSize: const Size(319, 59),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(8),
@@ -688,10 +768,45 @@ class _BootomState extends State<Bootom> with SingleTickerProviderStateMixin {
               height: 20,
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                showDialog(
+                    context: context,
+                    builder: (context) => AlertDialog(
+                          actions: [
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                const SizedBox(
+                                  height: 101,
+                                ),
+                                const Center(
+                                    child: Text(
+                                  'This is alert',
+                                  style: TextStyle(
+                                      fontSize: 26,
+                                      fontWeight: FontWeight.bold),
+                                )),
+                                const SizedBox(
+                                  height: 90,
+                                ),
+                                ElevatedButton(
+                                    style: ElevatedButton.styleFrom(
+                                      foregroundColor: Colors.white,
+                                      backgroundColor: const Color(0xffFB6236),
+                                      fixedSize: const Size(225, 54),
+                                    ),
+                                    onPressed: () {
+                                      Navigator.pop(context);
+                                    },
+                                    child: const Text('Close alert')),
+                              ],
+                            )
+                          ],
+                        ));
+              },
               style: ElevatedButton.styleFrom(
                 foregroundColor: Colors.white,
-                backgroundColor: Color(0xffFB6236),
+                backgroundColor: const Color(0xffFB6236),
                 fixedSize: const Size(319, 59),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(8),
