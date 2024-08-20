@@ -24,10 +24,14 @@ class Home extends StatelessWidget {
             ),
             bottom: TabBar(
                 labelColor: Colors.white,
-                labelPadding: const EdgeInsets.all(6),
+                labelPadding: const EdgeInsets.symmetric(
+                  horizontal: 6,
+                ),
                 dividerHeight: 0,
                 indicatorSize: TabBarIndicatorSize.tab,
-                padding: const EdgeInsets.symmetric(horizontal: 10),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 10,
+                ),
                 indicator: ShapeDecoration(
                   color: const Color(0xffFB6236),
                   shape: RoundedRectangleBorder(
@@ -44,27 +48,113 @@ class Home extends StatelessWidget {
                   ],
                 ),
                 tabs: [
-                  Text("Dishes",
-                      style: GoogleFonts.adamina(
-                        fontSize: 14,
-                      )),
+                  Container(
+                      height: 40,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(5),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.black.withOpacity(0.2),
+                              offset: Offset(0, 2),
+                              blurRadius: 4,
+                              spreadRadius: 1,
+                              blurStyle: BlurStyle.outer),
+                        ],
+                      ),
+                      child: Align(
+                          alignment: Alignment.center,
+                          child: Text(
+                            "Dishes",
+                            style: GoogleFonts.adamina(
+                              fontSize: 14,
+                            ),
+                          ))),
+                           Container(
+                      height: 40,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(5),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.black.withOpacity(0.2),
+                              offset: Offset(0, 2),
+                              blurRadius: 4,
+                              spreadRadius: 1,
+                              blurStyle: BlurStyle.outer),
+                        ],
+                      ),
+                      child: Align(
+                          alignment: Alignment.center,
+                          child:
                   Text("Pizza",
                       style: GoogleFonts.adamina(
                         fontSize: 14,
-                      )),
+                      )),)),
+                       Container(
+                      height: 40,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(5),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.black.withOpacity(0.2),
+                              offset: Offset(0, 2),
+                              blurRadius: 4,
+                              spreadRadius: 1,
+                              blurStyle: BlurStyle.outer),
+                        ],
+                      ),
+                      child: Align(
+                          alignment: Alignment.center,
+                          child:
                   Text("Burger",
                       style: GoogleFonts.adamina(
                         fontSize: 14,
-                      )),
+                      )),)),
+                       Container(
+                      height: 40,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(5),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.black.withOpacity(0.2),
+                              offset: Offset(0, 2),
+                              blurRadius: 4,
+                              spreadRadius: 1,
+                              blurStyle: BlurStyle.outer),
+                        ],
+                      ),
+                      child: Align(
+                          alignment: Alignment.center,
+                          child:
                   Text("Drinks",
                       style: GoogleFonts.adamina(
                         fontSize: 14,
-                      )),
+                      )),)),
+                       Container(
+                      height: 40,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(5),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.black.withOpacity(0.2),
+                              offset: Offset(0, 2),
+                              blurRadius: 4,
+                              spreadRadius: 1,
+                              blurStyle: BlurStyle.outer),
+                        ],
+                      ),
+                      child: Align(
+                          alignment: Alignment.center,
+                          child:
                   Text(
                     "Dessert",
                     style: GoogleFonts.adamina(
                       fontSize: 14,
-                    ),
+                    ),))
                   ),
                 ]),
           ),
@@ -159,7 +249,6 @@ class Home extends StatelessWidget {
                 showInfoButton(context: context)
               ],
             ),
-            
           ]),
         ));
   }
