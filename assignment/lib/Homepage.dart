@@ -187,19 +187,17 @@ class Card extends StatelessWidget {
         onPressed: () {
           showModalBottomSheet(context: context, builder: (context){
             return Container(
-              color: Color.fromARGB(255, 251, 97, 54),
+              color: const Color.fromARGB(255, 251, 97, 54),
               height: 400,
               width: 330,
                 child: Column(
                   children: [
-                    Text('Coupons',  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: const Color.fromARGB(255, 255, 255, 255))),
-                    Text('Cheese Burger', style: TextStyle(fontSize: 20, color: const Color.fromARGB(255, 255, 255, 255))),
-                    Text('ID', style: TextStyle(fontSize: 11, color: const Color.fromARGB(255, 255, 255, 255))),
-                    Text('C1487837237208', style: TextStyle(fontSize: 11, color: const Color.fromARGB(255, 255, 255, 255))),
+                    const Text('Coupons',  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Color.fromARGB(255, 255, 255, 255))),
+                    const Text('Cheese Burger', style: TextStyle(fontSize: 20, color: Color.fromARGB(255, 255, 255, 255))),
+                    const Text('ID', style: TextStyle(fontSize: 11, color: Color.fromARGB(255, 255, 255, 255))),
+                    const Text('C1487837237208', style: TextStyle(fontSize: 11, color: Color.fromARGB(255, 255, 255, 255))),
                     Image.asset('asset/Code.png'),
-                  ],
-
-                
+                  ], 
               ),           );
           });
         },
@@ -215,7 +213,39 @@ class Card extends StatelessWidget {
       ),
       const SizedBox(height: 8.0),
       ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+showDialog(
+  context: context,
+  builder: (BuildContext context) {
+    return AlertDialog(
+      title: const Text(''),
+      content: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          const Text(
+            'This is an Alert',
+            textAlign: TextAlign.center,
+          ),
+          const SizedBox(height: 16.0),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+            style: ElevatedButton.styleFrom(
+               backgroundColor: const Color.fromARGB(255, 251, 97, 54),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(5),
+              ),
+            ),
+            child: const Text('Close alert', style: TextStyle(color: Colors.white)),
+          ),
+        ],
+      ),
+    );
+  },
+);
+  
+        },
         style: ElevatedButton.styleFrom(
           fixedSize: const Size(300, 40),
           backgroundColor: const Color.fromARGB(255, 251, 97, 54),
