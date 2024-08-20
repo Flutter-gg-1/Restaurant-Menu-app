@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 
-Widget myContainer({required String imagePath, required String title}) {
+Widget myContainer(
+    {required String imagePath,
+    required String title,
+    required String text,
+    required String rate,
+    required String price}) {
   return Container(
     width: 359,
     height: 190,
@@ -40,25 +45,27 @@ Widget myContainer({required String imagePath, required String title}) {
             Row(children: [
               Image.asset(imagePath, width: 100),
               const SizedBox(width: 20),
-              const Column(
+              Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(
-                    'Basmati rice with Vegetable',
+                    text,
                   ),
                   Row(
                     children: [
-                      Icon(Icons.star, color: Color.fromRGBO(251, 98, 54, 1)),
+                      const Icon(Icons.star,
+                          color: Color.fromRGBO(251, 98, 54, 1)),
                       Text(
-                        '4.5',
-                        style: TextStyle(
+                        rate,
+                        style: const TextStyle(
                             fontSize: 17,
                             fontWeight: FontWeight.bold,
                             color: Color.fromRGBO(251, 98, 54, 1)),
                       ),
                     ],
                   ),
-                  Text('AED 45', style: TextStyle(fontWeight: FontWeight.bold)),
+                  Text(price,
+                      style: const TextStyle(fontWeight: FontWeight.bold)),
                 ],
               ),
             ])

@@ -74,23 +74,16 @@ class _Page1State extends State<Page1> {
                     children: [
                       const SizedBox(height: 50),
                       myContainer(
-                          imagePath: 'assets/2.png', title: 'White Rice'),
+                          imagePath: 'assets/2.png',
+                          title: 'White Rice',
+                          text: 'Basmati rice with Vegetable',
+                          rate: '4.5',
+                          price: 'AED 45'),
                       myButton(inputKey: _scaffoldKey),
                     ],
                   ),
                 ),
-                const Center(
-                  child: Text('Pizza'),
-                ),
-                const Center(
-                  child: Text('Burger'),
-                ),
-                const Center(
-                  child: Text('Drinks'),
-                ),
-                const Center(
-                  child: Text('Dessert'),
-                ),
+                
               ]),
             ),
           ],
