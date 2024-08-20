@@ -1,7 +1,8 @@
 # Restaurant Menu app
 
-**Complete and submit the TabBar, Bottom Sheet, and Alert dialog Lab of the given design**
+## ScreenShot
 
-**Note: Don't forget to include the Screenshots of your implementation**
-
-**Deadline: at 9:59 am, 20 Aug 2024**
+<img src="./assets/screenshot/img.png" width="300"/>
+<img src="./assets/screenshot/img_1.png" width="300"/>
+<img src="./assets/screenshot/img_2.png" width="300"/>
+<img src="./assets/screenshot/img_3.png" width="300"/>
