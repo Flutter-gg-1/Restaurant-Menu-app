@@ -1,16 +1,12 @@
-# alert_lab
+# Restaurant Menu app
+Welcom to Restaurant Menu app in this application the challenge was to match the given design from figma file 
 
-A new Flutter project.
+## widget used
+- TabBar
+Purpose: Displays a horizontal list of tabs, allowing users to switch between different views.
+- AlertDialog 
+widget is used to display an alert dialog, a modal window that prompts the user to make a decision or presents them with important information.
 
-## Getting Started
+## Output
+https://github.com/user-attachments/assets/a77dc757-2278-4043-9d69-011e3b8f0814
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
