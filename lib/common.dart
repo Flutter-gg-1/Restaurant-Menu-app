@@ -66,11 +66,31 @@ Widget myContainer() {
         ),
         Padding(
             padding: const EdgeInsets.only(left: 290, top: 30),
-            child: FloatingActionButton(
-              onPressed: () {},
-              backgroundColor: Colors.white,
-              child: Image.asset('assets/b.png'),
-            )),
+            child: Builder(builder: (context) {
+              return FloatingActionButton(
+                onPressed: () {
+                  // Show Alert Dialog
+                  showDialog(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return AlertDialog(
+                          title: const Text('Add item to cart'),
+                          content: const Text(' added successfully '),
+                          actions: [
+                            TextButton(
+                              onPressed: () {
+                                Navigator.of(context).pop();
+                              },
+                              child: const Text('OK'),
+                            ),
+                          ],
+                        );
+                      });
+                },
+                backgroundColor: Colors.white,
+                child: Image.asset('assets/b.png'),
+              );
+            })),
       ],
     ),
   );
