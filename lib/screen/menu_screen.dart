@@ -25,6 +25,39 @@ class _MenuScreenState extends State<MenuScreen>
     super.dispose();
   }
 
+  void _showInfoDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          backgroundColor: Colors.white,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20),
+          ),
+          content: const Text(
+            'Here is some information about the app!',
+            style: TextStyle(
+              fontSize: 18,
+            ),
+          ),
+          actions: <Widget>[
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: const Text(
+                'Close Alert',
+                style: TextStyle(
+                  color: AppColors.orange,
+                ),
+              ),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -67,133 +100,207 @@ class _MenuScreenState extends State<MenuScreen>
         ),
         body: Column(
           children: [
-            Expanded(
-              child: TabBarView(
-                controller: _tabController,
-                children: [
-                  CustomCard(
-                    title: const Text('White Rice',
-                        style: TextStyle(fontWeight: FontWeight.bold)),
-                    subtitle: const Text('Basmati rice with Vegetable\n⭐ 4.5'),
-                    trailing: const Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text('AED 45',
-                            style: TextStyle(fontWeight: FontWeight.bold)),
-                        SizedBox(height: 8),
-                        Icon(
-                          Icons.add_circle,
-                          color: AppColors.orange,
-                        ),
-                      ],
+            SizedBox(
+              height: 160,
+              child: Expanded(
+                child: TabBarView(
+                  controller: _tabController,
+                  children: [
+                    CustomCard(
+                      title: const Text('White Rice',
+                          style: TextStyle(fontWeight: FontWeight.bold)),
+                      subtitle: const Text('Basmati rice with Vegetable\n⭐ 4.5'),
+                      trailing: const Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text('AED 45',
+                              style: TextStyle(fontWeight: FontWeight.bold)),
+                          SizedBox(height: 8),
+                          Icon(
+                            Icons.add_circle,
+                            color: AppColors.orange,
+                          ),
+                        ],
+                      ),
+                      image: Image.asset(
+                        AppImages.dishes,
+                        fit: BoxFit.cover,
+                        width: 100,
+                      ),
                     ),
-                    image: Image.asset(
-                      AppImages.dishes,
-                      fit: BoxFit.cover,
-                      width: 100,
+                    CustomCard(
+                      title: const Text('Pizza Margherita',
+                          style: TextStyle(fontWeight: FontWeight.bold)),
+                      subtitle: const Text('Pizza Margherita Vegetarian\n⭐ 5.0'),
+                      trailing: const Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text('AED 55.9',
+                              style: TextStyle(fontWeight: FontWeight.bold)),
+                          SizedBox(height: 8),
+                          Icon(
+                            Icons.add_circle,
+                            color: AppColors.orange,
+                          ),
+                        ],
+                      ),
+                      image: Image.asset(
+                        AppImages.pizza,
+                        fit: BoxFit.cover,
+                        width: 100,
+                      ),
                     ),
-                  ),
-                  CustomCard(
-                    title: const Text('Pepperoni Pizza',
-                        style: TextStyle(fontWeight: FontWeight.bold)),
-                    subtitle: const Text('Cheesy pizza with Pepperoni\n⭐ 4.7'),
-                    trailing: const Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text('AED 55',
-                            style: TextStyle(fontWeight: FontWeight.bold)),
-                        SizedBox(height: 8),
-                        Icon(
-                          Icons.add_circle,
-                          color: AppColors.orange,
-                        ),
-                      ],
+                    CustomCard(
+                      title: const Text('Cheese Burger',
+                          style: TextStyle(fontWeight: FontWeight.bold)),
+                      subtitle: const Text('Bacon Cheeseburger\n⭐ 5.0'),
+                      trailing: const Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text('AED 55.9',
+                              style: TextStyle(fontWeight: FontWeight.bold)),
+                          SizedBox(height: 8),
+                          Icon(
+                            Icons.add_circle,
+                            color: AppColors.orange,
+                          ),
+                        ],
+                      ),
+                      image: Image.asset(
+                        AppImages.burger,
+                        fit: BoxFit.cover,
+                        width: 100,
+                      ),
                     ),
-                    image: Image.asset(
-                      AppImages.pizza,
-                      fit: BoxFit.cover,
-                      width: 100,
+                    CustomCard(
+                      title: const Text('Coca Cola',
+                          style: TextStyle(fontWeight: FontWeight.bold)),
+                      subtitle: const Text('Can Coke\n⭐ 5.0'),
+                      trailing: const Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text('AED 3.9',
+                              style: TextStyle(fontWeight: FontWeight.bold)),
+                          SizedBox(height: 8),
+                          Icon(
+                            Icons.add_circle,
+                            color: AppColors.orange,
+                          ),
+                        ],
+                      ),
+                      image: Image.asset(
+                        AppImages.drinks,
+                        fit: BoxFit.cover,
+                        width: 50,
+                      ),
                     ),
-                  ),
-                  CustomCard(
-                    title: const Text('Beef Burger',
-                        style: TextStyle(fontWeight: FontWeight.bold)),
-                    subtitle: const Text('Juicy beef burger\n⭐ 4.6'),
-                    trailing: const Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text('AED 35',
-                            style: TextStyle(fontWeight: FontWeight.bold)),
-                        SizedBox(height: 8),
-                        Icon(
-                          Icons.add_circle,
-                          color: AppColors.orange,
-                        ),
-                      ],
+                    CustomCard(
+                      title: const Text('Cupcake Strawberry',
+                          style: TextStyle(fontWeight: FontWeight.bold)),
+                      subtitle: const Text('Brown and Pink Dessert\n⭐ 5.0'),
+                      trailing: const Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text('AED 10.9',
+                              style: TextStyle(fontWeight: FontWeight.bold)),
+                          SizedBox(height: 8),
+                          Icon(
+                            Icons.add_circle,
+                            color: AppColors.orange,
+                          ),
+                        ],
+                      ),
+                      image: Image.asset(
+                        AppImages.dessert,
+                        fit: BoxFit.cover,
+                        width: 80,
+                      ),
                     ),
-                    image: Image.asset(
-                      AppImages.burger,
-                      fit: BoxFit.cover,
-                      width: 100,
-                    ),
-                  ),
-                  CustomCard(
-                    title: const Text('Lemonade',
-                        style: TextStyle(fontWeight: FontWeight.bold)),
-                    subtitle: const Text('Fresh lemonade drink\n⭐ 4.2'),
-                    trailing: const Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text('AED 15',
-                            style: TextStyle(fontWeight: FontWeight.bold)),
-                        SizedBox(height: 8),
-                        Icon(
-                          Icons.add_circle,
-                          color: AppColors.orange,
-                        ),
-                      ],
-                    ),
-                    image: Image.asset(
-                      AppImages.drinks,
-                      fit: BoxFit.cover,
-                      width: 100,
-                    ),
-                  ),
-                  CustomCard(
-                    title: const Text('Chocolate Cake',
-                        style: TextStyle(fontWeight: FontWeight.bold)),
-                    subtitle: const Text('Rich chocolate cake\n⭐ 4.8'),
-                    trailing: const Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text('AED 25',
-                            style: TextStyle(fontWeight: FontWeight.bold)),
-                        SizedBox(height: 8),
-                        Icon(
-                          Icons.add_circle,
-                          color: AppColors.orange,
-                        ),
-                      ],
-                    ),
-                    image: Image.asset(
-                      AppImages.dessert,
-                      fit: BoxFit.cover,
-                      width: 100,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            ElevatedButton(
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
+                  ],
                 ),
               ),
-              child: const Text('Custom Button'),
+            ),
+            const SizedBox(height: 330),
+            ElevatedButton(
+              onPressed: () {
+                showModalBottomSheet(
+                  useSafeArea: true,
+                  context: context,
+                  builder: (context) {
+                    return Container(
+                      height: 200,
+                      decoration: const BoxDecoration(
+                        color: AppColors.orange,
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(30),
+                          topRight: Radius.circular(30),
+                        ),
+                      ),
+                      child: const Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Text(
+                            'Coupons',
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Divider(),
+                          Text(
+                            'Cheese Burger',
+                            style: TextStyle(
+                              fontSize: 35,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
+                          ),
+                          SizedBox(height: 20),
+                          Text(
+                            'ID',
+                            style: TextStyle(
+                              fontSize: 18,
+                              color: Colors.white,
+                            ),
+                          ),
+                          Text(
+                            'C13579246810',
+                            style: TextStyle(
+                              fontSize: 18,
+                              color: Colors.white,
+                            ),
+                          ),
+                          SizedBox(height: 20),
+                        ],
+                      ),
+                    );
+                  },
+                );
+              },
+              style: ButtonStyle(
+                backgroundColor: WidgetStateProperty.all(AppColors.orange),
+                shape: WidgetStateProperty.all(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                ),
+              ),
+              child: const Text('Scan Coupon'),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                _showInfoDialog(context);
+              },
+              style: ButtonStyle(
+                backgroundColor: WidgetStateProperty.all(AppColors.orange),
+                shape: WidgetStateProperty.all(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                ),
+              ),
+              child: const Text('Show Info'),
             ),
           ],
         ),
@@ -226,11 +333,14 @@ class CustomCard extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12),
         ),
-        child: ListTile(
-          leading: image,
-          title: title,
-          subtitle: subtitle,
-          trailing: trailing,
+        child: SizedBox(
+          height: 220,
+          child: ListTile(
+            leading: image,
+            title: title,
+            subtitle: subtitle,
+            trailing: trailing,
+          ),
         ),
       ),
     );
