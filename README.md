@@ -9,23 +9,24 @@ Contain 5 tabs to allow customer to discover the menu based on food types
 
 ## Main Widget
 
-- `TabBar` & `TabBarView`
+### `TabBar` & `TabBarView`
 
 ![alt text](./assest/readme/image-1.png)
 
-- `showDialog` & `AlertDialog`
+### `showDialog` & `AlertDialog`
 
 ![alt text](./assest/readme/image-2.png)
 
-- `showModalBottomSheet`
+### `showModalBottomSheet`
 
 ![alt text](./assest/readme/image-3.png)
 
-- `DefaultTabController`
+### `DefaultTabController`
 
 ![alt text](./assest/readme/image-4.png)
 
 ## Output
+
 ![alt text](./assest/readme/menuGif.gif)
 
 Feel free to use with account name mentioned
