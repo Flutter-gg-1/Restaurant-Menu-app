@@ -51,7 +51,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         body: const TabBarView(
           children: [
-            MenuContainer(title: "White Rice", subtitle: "Basmati rice with Vegetable", rate: "4.5", price: "AED 45", photoBath: "assets/pngegg.png",),
+            MenuContainer(title: "White Rice", subtitle: "Basmati rice with Vegetable", rate: "4.5", price: "AED 45", photoBath: "assets/rice.png",),
             MenuContainer(photoBath: "assets/pizza.png", price: "AED 55.9", rate: "5.0", subtitle: "Pizza Margherita Vegetarian", title: "Pizza Margherita"),
             MenuContainer(photoBath: "assets/burger.png", price: "AED 55.9", rate: "5.0", subtitle: "Bacon Cheeseburger", title: "Cheese Burger"),
             MenuContainer(photoBath: "assets/drink.png", price: "AED 3.9", rate: "5.0", subtitle: "Can Coke", title: "Coca Cola"),
