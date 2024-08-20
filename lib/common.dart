@@ -118,18 +118,29 @@ Widget myButton({required GlobalKey<ScaffoldState> inputKey}) {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      const Text('Coupons',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold)),
+                      const Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Text('Coupons',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold)),
+                          SizedBox(height: 15),
+                          Text('Cheese Burger',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold)),
+                          Text('ID',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 10)),
+                          Text('C13579246810',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 8)),
+                        ],
+                      ),
                       const Divider(),
-                      const SizedBox(height: 15),
-                      const Text('Cheese Burger',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold)),
                       Flexible(
                           child: Image.asset('assets/par.png', width: 250)),
                     ],
