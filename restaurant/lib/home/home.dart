@@ -1,26 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:restaurant/home/sheet_view.dart';
 import 'package:restaurant/mock_data.dart';
 import '../constants.dart';
 import '../model/item.dart';
+import 'alert_view.dart';
 import 'category_picker.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
-
-  void _showSheet(BuildContext context) => showModalBottomSheet(
-      elevation: 10,
-      backgroundColor: C.orange,
-      context: context,
-      builder: (ctx) => Container(
-            width: 300,
-            height: 250,
-            color: Colors.white54,
-            alignment: Alignment.center,
-            child: const Text('Breathe in... Breathe out...'),
-          ));
-
-  void _showAlert() => print('');
 
   @override
   Widget build(BuildContext context) {
@@ -65,8 +53,24 @@ class CustomBtn extends StatelessWidget {
     required this.isAlert,
   });
 
+  void _showSheet(BuildContext context) => showModalBottomSheet(
+        elevation: 10,
+        backgroundColor: C.orange,
+        context: context,
+        builder: (ctx) => Container(
+          width: MediaQuery.of(context).size.width - 48,
+          height: MediaQuery.of(context).size.height / 2,
+          color: Colors.transparent,
+          alignment: Alignment.center,
+          child: const SheetView(),
+        ),
+      );
+
+  void _showAlert(BuildContext context) => showDialog<String>(
+      context: context, builder: (BuildContext context) => const AlertView());
+
   final String title;
-  bool isAlert;
+  final bool isAlert;
 
   @override
   Widget build(BuildContext context) {
@@ -82,7 +86,8 @@ class CustomBtn extends StatelessWidget {
                 borderRadius: BorderRadius.circular(12),
               ),
             ),
-            onPressed: () => (),
+            onPressed: () =>
+                !isAlert ? _showSheet(context) : _showAlert(context),
             child: Text(title,
                 style: const TextStyle(
                   color: Colors.white,
