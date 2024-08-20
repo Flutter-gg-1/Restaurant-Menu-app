@@ -76,7 +76,7 @@ class _BootomState extends State<Bootom> with SingleTickerProviderStateMixin {
                       shadowColor: Colors.grey,
                       child: const FittedBox(
                         fit: BoxFit.none,
-                        child: Text('Pizza'),
+                        child: Text('Drinks'),
                       ),
                     ),
                   ),
@@ -95,7 +95,7 @@ class _BootomState extends State<Bootom> with SingleTickerProviderStateMixin {
                       shadowColor: Colors.grey,
                       child: const FittedBox(
                         fit: BoxFit.none,
-                        child: Text('Burger'),
+                        child: Text('Desert'),
                       ),
                     ),
                   ),
@@ -114,7 +114,7 @@ class _BootomState extends State<Bootom> with SingleTickerProviderStateMixin {
                       shadowColor: Colors.grey,
                       child: const FittedBox(
                         fit: BoxFit.fitWidth,
-                        child: Text('Drinks'),
+                        child: Text('burger'),
                       ),
                     ),
                   ),
@@ -134,7 +134,7 @@ class _BootomState extends State<Bootom> with SingleTickerProviderStateMixin {
                       child: const FittedBox(
                         fit: BoxFit.fitWidth,
                         child: Text(
-                          'Dessert',
+                          'Pizza',
                         ),
                       ),
                     ),
@@ -322,13 +322,13 @@ class _BootomState extends State<Bootom> with SingleTickerProviderStateMixin {
                                 ))),
                         const Positioned(
                             top: 16,
-                            left: 130,
+                            left: 89,
                             right: 81,
                             bottom: 79,
                             child: FittedBox(
                                 fit: BoxFit.none,
                                 child: Text(
-                                  "White rice",
+                                  "cola",
                                   style: TextStyle(
                                       fontSize: 14,
                                       fontWeight: FontWeight.bold),
@@ -426,13 +426,13 @@ class _BootomState extends State<Bootom> with SingleTickerProviderStateMixin {
                                 ))),
                         const Positioned(
                             top: 16,
-                            left: 130,
+                            left: 105,
                             right: 81,
                             bottom: 79,
                             child: FittedBox(
                                 fit: BoxFit.none,
                                 child: Text(
-                                  "White rice",
+                                  "Desert",
                                   style: TextStyle(
                                       fontSize: 14,
                                       fontWeight: FontWeight.bold),
@@ -530,13 +530,13 @@ class _BootomState extends State<Bootom> with SingleTickerProviderStateMixin {
                                 ))),
                         const Positioned(
                             top: 16,
-                            left: 130,
+                            left: 105,
                             right: 81,
                             bottom: 79,
                             child: FittedBox(
                                 fit: BoxFit.none,
                                 child: Text(
-                                  "White rice",
+                                  " Burger",
                                   style: TextStyle(
                                       fontSize: 14,
                                       fontWeight: FontWeight.bold),
@@ -634,13 +634,13 @@ class _BootomState extends State<Bootom> with SingleTickerProviderStateMixin {
                                 ))),
                         const Positioned(
                             top: 16,
-                            left: 130,
+                            left: 90,
                             right: 81,
                             bottom: 79,
                             child: FittedBox(
                                 fit: BoxFit.none,
                                 child: Text(
-                                  "White rice",
+                                  " Pitza",
                                   style: TextStyle(
                                       fontSize: 14,
                                       fontWeight: FontWeight.bold),
