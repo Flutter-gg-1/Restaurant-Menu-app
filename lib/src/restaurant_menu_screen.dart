@@ -625,102 +625,107 @@ class RestaurantScreen extends StatelessWidget {
                 alignment: Alignment.bottomCenter,
                 child: Column(
                   children: [
-                    Container(
-                      width: 319,
-                      height: 54,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(9),
-                          color: const Color(0xffFB6236)),
-                      child: Center(
-                          child: TextButton(
-                              style: TextButton.styleFrom(
-                                fixedSize: const Size.fromWidth(319),
-                              ),
-                              onPressed: () {
-                                showModalBottomSheet(
-                                    context: context,
-                                    builder: (builder) {
-                                      return Container(
-                                        width: 349,
-                                        height: 548.43,
-                                        decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(25),
-                                          color: const Color(0xffFB6236),
-                                        ),
-                                        child: Column(
-                                          children: [
-                                            const Align(
+                    Material(
+                      elevation: 6,
+                      color: Colors.transparent,
+                      child: Container(
+                        width: 319,
+                        height: 54,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(9),
+                            color: const Color(0xffFB6236)),
+                        child: Center(
+                            child: TextButton(
+                                style: TextButton.styleFrom(
+                                  fixedSize: const Size.fromWidth(319),
+                                ),
+                                onPressed: () {
+                                  showModalBottomSheet(
+                                      context: context,
+                                      builder: (builder) {
+                                        return Container(
+                                          width: 349,
+                                          height: 548.43,
+                                          decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(25),
+                                            color: const Color(0xffFB6236),
+                                          ),
+                                          child: Column(
+                                            children: [
+                                              const Align(
+                                                  alignment: Alignment.topLeft,
+                                                  child: Padding(
+                                                    padding: EdgeInsets.only(
+                                                        top: 8, left: 8),
+                                                    child: Text(
+                                                      'Coupons',
+                                                      style: TextStyle(
+                                                          fontSize: 19.94,
+                                                          color: Colors.white,
+                                                          fontWeight:
+                                                              FontWeight.w500),
+                                                    ),
+                                                  )),
+                                              const Divider(),
+                                              const Align(
                                                 alignment: Alignment.topLeft,
                                                 child: Padding(
-                                                  padding: EdgeInsets.only(
-                                                      top: 8, left: 8),
+                                                  padding: EdgeInsets.all(18.0),
                                                   child: Text(
-                                                    'Coupons',
+                                                    'Cheese Burger',
                                                     style: TextStyle(
-                                                        fontSize: 19.94,
+                                                        fontSize: 29.91,
                                                         color: Colors.white,
                                                         fontWeight:
-                                                            FontWeight.w500),
+                                                            FontWeight.w400),
                                                   ),
-                                                )),
-                                            const Divider(),
-                                            const Align(
-                                              alignment: Alignment.topLeft,
-                                              child: Padding(
-                                                padding: EdgeInsets.all(18.0),
-                                                child: Text(
-                                                  'Cheese Burger',
-                                                  style: TextStyle(
-                                                      fontSize: 29.91,
-                                                      color: Colors.white,
-                                                      fontWeight:
-                                                          FontWeight.w400),
                                                 ),
                                               ),
-                                            ),
-                                            const Align(
-                                                alignment: Alignment.topLeft,
-                                                child: Padding(
-                                                  padding:
-                                                      EdgeInsets.only(left: 19),
-                                                  child: Text(
-                                                    'ID\nC13579246810',
-                                                    style: TextStyle(
-                                                        color: Colors.white),
-                                                  ),
-                                                )),
-                                            const SizedBox(
-                                              height: 80,
-                                            ),
-                                            Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: [
-                                                Container(
-                                                  height: 172.52,
-                                                  width: 172.52,
-                                                  decoration: BoxDecoration(
-                                                      color: Colors.white,
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              18.62)),
-                                                  child: Image.asset(
-                                                      "assets/QR Code Sample.png"),
-                                                )
-                                              ],
-                                            )
-                                          ],
-                                        ),
-                                      );
-                                    });
-                              },
-                              child: const Text(
-                                'Scan Coupon',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500,
-                                    color: Colors.white),
-                              ))),
+                                              const Align(
+                                                  alignment: Alignment.topLeft,
+                                                  child: Padding(
+                                                    padding: EdgeInsets.only(
+                                                        left: 19),
+                                                    child: Text(
+                                                      'ID\nC13579246810',
+                                                      style: TextStyle(
+                                                          color: Colors.white),
+                                                    ),
+                                                  )),
+                                              const SizedBox(
+                                                height: 80,
+                                              ),
+                                              Row(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                children: [
+                                                  Container(
+                                                    height: 172.52,
+                                                    width: 172.52,
+                                                    decoration: BoxDecoration(
+                                                        color: Colors.white,
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(
+                                                                    18.62)),
+                                                    child: Image.asset(
+                                                        "assets/QR Code Sample.png"),
+                                                  )
+                                                ],
+                                              )
+                                            ],
+                                          ),
+                                        );
+                                      });
+                                },
+                                child: const Text(
+                                  'Scan Coupon',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.white),
+                                ))),
+                      ),
                     ),
                     const SizedBox(
                       height: 21,
