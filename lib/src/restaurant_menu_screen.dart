@@ -646,10 +646,11 @@ class RestaurantScreen extends StatelessWidget {
                                         return Container(
                                           width: 349,
                                           height: 548.43,
-                                          decoration: BoxDecoration(
-                                            borderRadius:
-                                                BorderRadius.circular(25),
-                                            color: const Color(0xffFB6236),
+                                          decoration: const BoxDecoration(
+                                            borderRadius: BorderRadius.only(
+                                                topRight: Radius.circular(6),
+                                                topLeft: Radius.circular(6)),
+                                            color: Color(0xffFB6236),
                                           ),
                                           child: Column(
                                             children: [

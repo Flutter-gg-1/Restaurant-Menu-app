@@ -11,7 +11,7 @@ Functionalities:
 <li>Displays a tab bar at the top with five categories (Dishes, Pizza, Burger, Drinks, Dessert). 
 
 <li>Shows a sample food item with an image, title, description, rating, and price.
-    
+
 
 
 
