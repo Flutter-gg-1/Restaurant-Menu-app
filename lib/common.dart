@@ -72,30 +72,32 @@ Widget myContainer(
           ],
         ),
         Padding(
-            padding: const EdgeInsets.only(left: 290, top: 30),
+            padding: const EdgeInsets.only(left: 290, top: 10),
             child: Builder(builder: (context) {
-              return FloatingActionButton(
-                onPressed: () {
-                  // Show Alert Dialog
-                  showDialog(
-                      context: context,
-                      builder: (BuildContext context) {
-                        return AlertDialog(
-                          title: const Text('Add item to cart'),
-                          content: const Text(' added successfully '),
-                          actions: [
-                            TextButton(
-                              onPressed: () {
-                                Navigator.of(context).pop();
-                              },
-                              child: const Text('OK'),
-                            ),
-                          ],
-                        );
-                      });
-                },
-                backgroundColor: Colors.white,
-                child: Image.asset('assets/b.png'),
+              return Flexible(
+                child: FloatingActionButton(
+                  onPressed: () {
+                    // Show Alert Dialog
+                    showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return AlertDialog(
+                            title: const Text('Add item to cart'),
+                            content: const Text(' added successfully '),
+                            actions: [
+                              TextButton(
+                                onPressed: () {
+                                  Navigator.of(context).pop();
+                                },
+                                child: const Text('OK'),
+                              ),
+                            ],
+                          );
+                        });
+                  },
+                  backgroundColor: Colors.white,
+                  child: Image.asset('assets/b.png'),
+                ),
               );
             })),
       ],
