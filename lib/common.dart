@@ -110,7 +110,16 @@ Widget myButton({required GlobalKey<ScaffoldState> inputKey}) {
             backgroundColor: WidgetStateProperty.all<Color>(
                 const Color.fromRGBO(251, 98, 54, 1)),
           ),
-          onPressed: () {},
+          onPressed: () {
+            inputKey.currentState!.showBottomSheet((context) => Container(
+                  color: Colors.white,
+                  height: 300,
+                  width: double.infinity,
+                  child: const Center(
+                    child: Text('Coming Soon'),
+                  ),
+                ));
+          },
           child: const Text(
             'Scan Coupon',
             style: TextStyle(color: Colors.white),
